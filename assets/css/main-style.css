@@ -8,7 +8,7 @@
     --asteriskColor: rgb(85, 85, 85);
     --listDividerColor: rgb(235, 235, 235);
     --ratingColor: rgb(100, 100, 100);
-    --blockquoteBorderColor: rgb(224, 60, 0);
+    --blockquoteBorderColor: rgba(224, 60, 0, .5);
     --footerLinkColorHover: rgb(128,128,128);
     --footerBackgroundColor: rgba(255, 255, 255, 0.75);
     --footerTextColor: rgb(70, 70, 70);
