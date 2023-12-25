@@ -108,7 +108,7 @@ h1 {
 
 @media screen and (orientation: portrait) {
     .home-vh {
-        min-height: 70vh;
+        min-height: 85vh;
     }
 }
 
