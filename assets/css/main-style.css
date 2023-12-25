@@ -54,6 +54,15 @@ h1 {
     font-size: 1.8em;
 }
 
+/* h1.blog,h2.blog,h3.blog,h4.blog,h5.blog,h6.blog {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.blog-title {
+    margin-bottom: 1.5em;
+} */
+
 .monospace {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -175,6 +184,9 @@ blockquote {
         border-bottom: 1px solid;
         border-color: var(--listDividerColor);
         padding: 20px 0;
+    }
+    .custom-unordered-list li:first-child {
+        padding-top: 0;
     }
     .custom-unordered-list li:last-child {
         border: none;
