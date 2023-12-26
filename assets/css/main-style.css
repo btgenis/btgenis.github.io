@@ -3,12 +3,12 @@
     --globalFontColor: rgb(32,32,32);
     --globalLinkUnderlineColor: rgb(255, 255, 55);
     --globalLinkUnderlineColorHover: rgb(255, 255, 195);
-    --globalEmptyUnderlineColor: rgb(190, 230, 190);
     --fadedTextColor: rgb(214, 214, 214);
     --asteriskColor: rgb(85, 85, 85);
     --listDividerColor: rgb(235, 235, 235);
     --ratingColor: rgb(100, 100, 100);
     --blockquoteBorderColor: rgba(224, 60, 0, .5);
+    --grayBoxColor: rgb(240, 240, 240);
     --footerLinkColorHover: rgb(128,128,128);
     --footerBackgroundColor: rgba(255, 255, 255, 0.75);
     --footerTextColor: rgb(70, 70, 70);
@@ -23,11 +23,11 @@
             --globalFontColor: rgb(240, 240, 240);
             --globalLinkUnderlineColor: rgb(80, 80, 0);
             --globalLinkUnderlineColorHover: rgb(60, 60, 0);
-            --globalEmptyUnderlineColor: rgb(71, 86, 71);
             --fadedTextColor: rgb(70, 70, 70);
             --asteriskColor: rgb(170, 170, 170);
             --listDividerColor: rgb(45, 45, 45);
             --ratingColor: rgb(155, 155, 155);
+            --grayBoxColor: rgb(40, 40, 40);
             --footerBackgroundColor: rgba(25, 25, 25, 0.75);
             --footerLinkColorHover: rgb(128,128,128);
             --footerTextColor: rgb(180, 180, 180);
@@ -62,6 +62,10 @@ h1 {
 .blog-title {
     margin-bottom: 1.5em;
 } */
+
+.arrow-right::after {
+    content: " \2192";
+}
 
 .monospace {
     font-family: 'Courier New', Courier, monospace;
@@ -159,12 +163,11 @@ a {
         text-decoration-color: var(--globalLinkUnderlineColorHover);
     }
 
-.empty-underline {
-    text-decoration: underline;
-    text-decoration-color: var(--globalEmptyUnderlineColor);
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 0.5rem;
-    text-underline-offset: -0.15rem;
+.gray-box {
+    display: inline-block;
+    background-color: var(--grayBoxColor);
+    padding: 10px 15px;
+    border-radius: 7px;
 }
 
 blockquote {
