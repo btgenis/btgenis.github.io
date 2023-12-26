@@ -89,6 +89,11 @@ ATTRIBUTES
     font-family: 'Courier New', Courier, monospace;
 }
 
+.verse * {
+    text-align-last: right;
+    display: inline-block;
+}
+
 .asterisk::before {
     content: '';
     width: 1.5rem;
