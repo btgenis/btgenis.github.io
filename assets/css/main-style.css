@@ -116,20 +116,27 @@ h1 {
     }
 }
 
-.rating.ten::after {content: "★★★★★";}
-.rating.nine::after {content: "★★★★½";}
-.rating.eight::after {content: "★★★★";}
-.rating.seven::after {content: "★★★½";}
-.rating.six::after {content: "★★★";}
-.rating.five::after {content: "★★½";}
-.rating.four::after {content: "★★";}
-.rating.three::after {content: "★½";}
-.rating.two::after {content: "★";}
-.rating.one::after {content: "½";}
+.rating.ten::before {content: "\2605\2605\2605\2605\2605";}
+.rating.nine::before {content: "\2605\2605\2605\2605\00BD";}
+.rating.eight::before {content: "\2605\2605\2605\2605";}
+.rating.seven::before {content: "\2605\2605\2605\00BD";}
+.rating.six::before {content: "\2605\2605\2605";}
+.rating.five::before {content: "\2605\2605\00BD";}
+.rating.four::before {content: "\2605\2605";}
+.rating.three::before {content: "\2605\00BD";}
+.rating.two::before {content: "\2605";}
+.rating.one::before {content: "\00BD";}
 
-.rating::after {
+.rating::before {
     color: var(--ratingColor);
     margin-left: 10px;
+}
+
+.fav::after {
+    content: "\2665";
+    color: var(--ratingColor);
+    margin-left: 10px;
+    color: rgba(255, 0, 0, .6);
 }
 
 .asterisk::before {
