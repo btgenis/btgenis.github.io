@@ -250,7 +250,8 @@ CONTENT
 
 @media screen and (orientation: portrait) {
     .home-vh {
-        min-height:85dvh; /* Mobil cihazlar için anasayfa yüksekliğini ayarlar. */
+        min-height: 70vh; /* For browsers not supporting svh */
+        min-height: 85svh;
     }
 }
 
