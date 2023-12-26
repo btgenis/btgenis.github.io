@@ -116,6 +116,8 @@ h1 {
     }
 }
 
+.rating {display: inline-block;}
+
 .rating.ten::before {content: "\2605\2605\2605\2605\2605";}
 .rating.nine::before {content: "\2605\2605\2605\2605\00BD";}
 .rating.eight::before {content: "\2605\2605\2605\2605";}
