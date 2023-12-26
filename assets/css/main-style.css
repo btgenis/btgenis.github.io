@@ -301,16 +301,6 @@ footer {
         align-self: auto;
         order: 0;
         }
-            .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io']::before {
-                content: "{";
-                margin-right: 5px;
-                color: gray;
-            }
-            .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io']::after {
-                content: "}";
-                margin-left: 5px;
-                color: gray;
-            }
 
         .footer-flex-item:nth-child(2) {
         display: block;
