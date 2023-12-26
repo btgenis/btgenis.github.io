@@ -301,6 +301,9 @@ footer {
         align-self: auto;
         order: 0;
         }
+        .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io'] {
+            font-weight: 500;
+        }
 
         .footer-flex-item:nth-child(2) {
         display: block;
