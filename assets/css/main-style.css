@@ -258,7 +258,7 @@ CONTENT
 @media screen and (orientation: portrait) {
     .home-vh {
         min-height: 70vh; /* For browsers not supporting svh */
-        min-height: 85svh;
+        min-height: 75svh;
     }
 }
 
