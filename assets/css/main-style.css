@@ -1,4 +1,35 @@
 /*
+
+---------------------------------------
+
+GLOBAL
+
+---------------------------------------
+
+*/
+
+html {
+    /* Fixing landscape font size problem. */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--globalBackground);
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;    font-size: 1em;
+    line-height: 1.5;
+    color: var(--globalFontColor);
+    padding-bottom: 70px !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 300;
+    transition: 0.3s ease-out;
+}
+
+
+
+/*
 ---------------------------------------
 
 VARIABLES
@@ -41,30 +72,6 @@ VARIABLES
             --footerTextColor: rgb(180, 180, 180);
         }
     }
-
-
-
-/*
-
----------------------------------------
-
-GLOBAL
-
----------------------------------------
-
-*/
-
-body {
-    background-color: var(--globalBackground);
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;    font-size: 1em;
-    line-height: 1.5;
-    color: var(--globalFontColor);
-    padding-bottom: 70px !important;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-weight: 300;
-    transition: 0.3s ease-out;
-}
 
 
 
