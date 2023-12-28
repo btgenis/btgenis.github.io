@@ -193,19 +193,22 @@ a {
 
         .custom-unordered-list li .item-title {
             display: block;
+            padding-bottom: 10px;
         }
             .custom-unordered-list li .item-title .work-title {
                 margin-right: 7px;
             }
-                .custom-unordered-list li .item-title .work-title a {
-                    font-weight: 400;
-                }
             
         .custom-unordered-list li .comment {
-            padding-top: 10px;
             color: gray;
             margin-left: 40px;
         }
+.custom-unordered-list.books-list .item-title {
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--globalBackground);
+}
 
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.2;
@@ -296,8 +299,9 @@ CONTENT
 .internet-archive-list * {
     margin: 0;
 }
-.internet-archive-list .ia-date {
+.sticky-date {
     padding: 15px 0;
+    margin: 0;
     border-bottom: 1px solid;
     border-color: var(--listDividerColor);
     position: sticky;   /* Sticky dates */
@@ -392,7 +396,6 @@ footer {
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
     color: var(--footerTextColor);
-    font-weight: 400;
 }
     footer a {
         text-decoration: none;
