@@ -39,6 +39,7 @@ VARIABLES
 
 :root{
     --globalBackground: rgb(255,255,255);
+    --globalBackgroundWithOpacity: rgba(255,255,255,.75);
     --globalFontColor: rgb(32,32,32);
     --globalLinkUnderlineColor: rgb(255, 255, 55);
     --globalLinkUnderlineColorHover: rgb(255, 255, 195);
@@ -59,6 +60,7 @@ VARIABLES
     @media (prefers-color-scheme: dark){
         :root{
             --globalBackground: rgb(25, 25, 25);
+            --globalBackgroundWithOpacity: rgba(25, 25, 25, .75);
             --globalFontColor: rgb(240, 240, 240);
             --globalLinkUnderlineColor: rgb(80, 80, 0);
             --globalLinkUnderlineColorHover: rgb(60, 60, 0);
@@ -207,7 +209,9 @@ a {
     padding-top: 10px;
     position: sticky;
     top: 0;
-    background-color: var(--globalBackground);
+    background: var(--globalBackgroundWithOpacity);
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -304,9 +308,11 @@ CONTENT
     margin: 0;
     border-bottom: 1px solid;
     border-color: var(--listDividerColor);
-    position: sticky;   /* Sticky dates */
+    position: sticky;
     top: 0;
-    background-color: var(--globalBackground);
+    background: var(--globalBackgroundWithOpacity);
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 }
 .internet-archive-grid-row {
     display: grid;
