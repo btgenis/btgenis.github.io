@@ -83,6 +83,22 @@ ATTRIBUTES
 ---------------------------------------
 */
 
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.plain-link {
+    text-decoration: none !important;
+}
+.plain-link:hover {
+    opacity: .5;
+}
+
 .faded {
     color: var(--fadedTextColor);
 }
@@ -131,8 +147,8 @@ ATTRIBUTES
 .fav::after {
     content: "\2665";
     color: var(--ratingColor);
-    margin-left: 10px;
     color: rgba(255, 0, 0, .6);
+    margin-left: 7px;
 }
 
 
@@ -181,6 +197,9 @@ a {
             .custom-unordered-list li .item-title .work-title {
                 margin-right: 7px;
             }
+                .custom-unordered-list li .item-title .work-title a {
+                    font-weight: 400;
+                }
             
         .custom-unordered-list li .comment {
             padding-top: 10px;
@@ -254,14 +273,106 @@ CONTENT
     margin-top: var(--globalTopMargin);
     margin-bottom: 20px;
 }
+.content-container.wide{
+    max-width: var(--largeWidth);
+}
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
     .home-vh {
-        min-height: 70vh; /* For browsers not supporting svh */
+        min-height: 70vh;
         min-height: 75svh;
+    }
+} */
+
+/* İnternet Arşivi Sayfası */
+
+.internet-archive-list li:first-child {padding-top: 0;}
+.internet-archive-list li:last-child {border: none;}
+.internet-archive-list {
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+.internet-archive-list * {
+    margin: 0;
+}
+.internet-archive-list .ia-date {
+    padding: 15px 0;
+    border-bottom: 1px solid;
+    border-color: var(--listDividerColor);
+    position: sticky;   /* Sticky dates */
+    top: 0;
+    background-color: var(--globalBackground);
+}
+.internet-archive-grid-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid;
+    border-color: var(--listDividerColor);
+    font-size: .9em;
+}
+.internet-archive-grid-row .ia-title a {
+    display: inline-block;
+    margin-right: 7px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.internet-archive-grid-row .ia-credit a {
+    display: inline-block;
+    text-decoration: none;
+}
+.internet-archive-grid-row .ia-credit a:hover {
+    color: gray;
+}
+.internet-archive-grid-row .ia-comment {
+    color: gray;
+}
+.internet-archive-grid-row.title-row * {
+    color: var(--fadedTextColor) !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .internet-archive-list .internet-archive-grid-row {
+        font-size: 1em;
+    }
+    .internet-archive-grid-row.title-row {
+        display: none;
+    }
+    .internet-archive-grid-row {
+        display: block;
+    }
+    .internet-archive-grid-row div {
+        margin-bottom: 10px;
+    }
+    .internet-archive-grid-row .ia-credit a::before {
+        content: "@ ";
+    }
+    .internet-archive-grid-row div:last-child {
+        margin-left: 40px;
     }
 }
 
+/* Copyright */
+
+.copy {
+    color: var(--fadedTextColor);
+    text-align: right;
+    font-size: .8em;
+    font-weight: 200;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 /*
@@ -310,8 +421,8 @@ footer {
         order: 0;
         }
             .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io']::after {
-            content: "\00A9\00A0\00A0 2024";
-            margin-left: 10px;
+            content: "\00A9\00A0 2024";
+            margin-left: 5px;
             color: var(--fadedTextColor);
             }
 
@@ -333,3 +444,13 @@ footer {
                     display: inline-block;
                     margin-left: 20px;
                 }
+@media only screen and (max-width: 500px) {
+    .footer-navigation li {
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io']::after {
+        display: none;
+    }
+}
