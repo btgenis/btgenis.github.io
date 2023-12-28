@@ -209,9 +209,7 @@ a {
     padding-top: 10px;
     position: sticky;
     top: 0;
-    background: var(--globalBackgroundWithOpacity);
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
+    background: var(--globalBackground);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -310,9 +308,7 @@ CONTENT
     border-color: var(--listDividerColor);
     position: sticky;
     top: 0;
-    background: var(--globalBackgroundWithOpacity);
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
+    background: var(--globalBackground);
 }
 .internet-archive-grid-row {
     display: grid;
