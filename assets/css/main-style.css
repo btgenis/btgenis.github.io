@@ -272,7 +272,6 @@ CONTENT
     max-width: var(--contentWidth);
     margin: 0 auto;
     margin-top: var(--globalTopMargin);
-    margin-bottom: 20px;
 }
 .content-container.wide{
     max-width: var(--largeWidth);
