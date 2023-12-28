@@ -423,11 +423,6 @@ footer {
         align-self: auto;
         order: 0;
         }
-            .footer-flex-item:nth-child(1) a[href$='https://btgenis.github.io']::after {
-            content: "\00A9\00A0 2024";
-            margin-left: 5px;
-            color: var(--fadedTextColor);
-            }
 
         .footer-flex-item:nth-child(2) {
         display: block;
