@@ -223,6 +223,7 @@ h1 {
     align-items: start;
     align-content: stretch;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
     .two-column-flex-container .flex-item:nth-child(1), .two-column-flex-container .flex-item:nth-child(2) {
         display: block;
