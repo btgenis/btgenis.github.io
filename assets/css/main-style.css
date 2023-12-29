@@ -393,10 +393,38 @@ CONTENT
     border-color: var(--listDividerColor);
 }
 .internet-archive-grid-row .ia-title a {
-    display: inline-block;
+    display: inline;
     margin-right: 7px;
     border-radius: 5px;
 }
+    .internet-archive-grid-row .ia-title span.tag::before {
+        font-size: .7em;
+        border-radius: 500px;
+        padding: 2px 7px;
+        vertical-align: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .internet-archive-grid-row .ia-title span.article::before {
+        content: "Yazı";
+        background-color: rgba(128, 128, 128, .8);
+        color: white;
+    }
+    .internet-archive-grid-row .ia-title span.video::before {
+        content: "Video";
+        background-color: rgba(255, 0, 0, 0.5);
+        color: white;
+    }
+    .internet-archive-grid-row .ia-title span.website::before {
+        content: "Site";
+        background-color: rgba(162, 0, 162, 0.6);
+        color: white;
+    }
+
 .internet-archive-grid-row .ia-credit a {
     display: inline-block;
     text-decoration: none;
@@ -404,6 +432,7 @@ CONTENT
 .internet-archive-grid-row .ia-credit a:hover {
     color: gray;
 }
+
 .internet-archive-grid-row .ia-comment {
     color: gray;
 }
