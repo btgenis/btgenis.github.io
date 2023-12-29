@@ -186,11 +186,6 @@ ELEMENTS
 ---------------------------------------
 */
 
-.sticky-element-pusher {
-    position: sticky;
-    top: 0;
-}
-
 a {
     text-decoration: underline;
     text-decoration-color: var(--globalLinkUnderlineColor);
@@ -333,10 +328,10 @@ CONTENT
 
 .home-vh {
     background-color: var(--globalBackground);
-    min-height: 100vh;
 }
 .home-vh-inner {
     position: sticky;
+    min-height: 90vh;
     top: 0;
     padding-top: var(--globalTopMargin);
 }
