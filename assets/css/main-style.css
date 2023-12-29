@@ -52,7 +52,9 @@ VARIABLES
     --footerLinkColorHover: rgb(128,128,128);
     --footerBackgroundColor: rgba(255, 255, 255, 0.75);
     --footerTextColor: rgb(70, 70, 70);
+
     --contentWidth: 700px;
+    --narrowWidth: 70%;
     --largeWidth: 1200px;
     --globalTopMargin: 50px;
 }
@@ -103,6 +105,18 @@ ATTRIBUTES
 
 .faded {
     color: var(--fadedTextColor);
+}
+
+.gray {
+    color: gray;
+}
+
+.narrow {
+    max-width: var(--narrowWidth);
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 .description{
