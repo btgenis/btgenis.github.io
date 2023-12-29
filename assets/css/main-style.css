@@ -96,6 +96,10 @@ ATTRIBUTES
     margin-top: 0 !important;
 }
 
+.no-bottom-padding {
+    padding-bottom: 0 !important;
+}
+
 .no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -330,12 +334,12 @@ CONTENT
     background-color: var(--globalBackground);
     min-height: 95vh;
     min-height: 100svh;
-
 }
 .home-vh-inner {
     position: sticky;
     top: 0;
     padding-top: var(--globalTopMargin);
+    padding-bottom: 70px;
 }
 .home-vh h2 {
     margin-top: 0;
