@@ -331,7 +331,7 @@ CONTENT
 }
 .home-vh-inner {
     position: sticky;
-    min-height: 90vh;
+    min-height: 100vh;
     top: 0;
     padding-top: var(--globalTopMargin);
 }
