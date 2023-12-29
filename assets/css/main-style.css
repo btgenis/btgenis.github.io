@@ -41,8 +41,8 @@ VARIABLES
     --globalBackground: rgb(255,255,255);
     --globalBackgroundWithOpacity: rgba(255,255,255,.75);
     --globalFontColor: rgb(32,32,32);
-    --globalLinkUnderlineColor: rgb(255, 255, 55);
-    --globalLinkUnderlineColorHover: rgb(255, 255, 195);
+    --globalLinkUnderlineColor: rgba(255,236,61,.4);
+    --globalLinkUnderlineColorHover: rgba(255,236,61,.9);
     --fadedTextColor: rgb(214, 214, 214);
     --asteriskColor: rgb(85, 85, 85);
     --listDividerColor: rgb(235, 235, 235);
@@ -64,8 +64,8 @@ VARIABLES
             --globalBackground: rgb(25, 25, 25);
             --globalBackgroundWithOpacity: rgba(25, 25, 25, .75);
             --globalFontColor: rgb(240, 240, 240);
-            --globalLinkUnderlineColor: rgb(80, 80, 0);
-            --globalLinkUnderlineColorHover: rgb(60, 60, 0);
+            --globalLinkUnderlineColor: rgba(255,236,61,.3);
+            --globalLinkUnderlineColorHover: rgba(255,236,61,.45);
             --fadedTextColor: rgb(70, 70, 70);
             --asteriskColor: rgb(170, 170, 170);
             --listDividerColor: rgb(45, 45, 45);
