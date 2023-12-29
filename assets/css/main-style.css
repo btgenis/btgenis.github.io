@@ -56,6 +56,7 @@ VARIABLES
     --contentWidth: 700px;
     --narrowWidth: 70%;
     --largeWidth: 1200px;
+    --mediumWidth: 950px;
     --globalTopMargin: 50px;
 }
     /* Dark Mode */
@@ -335,15 +336,29 @@ CONTENT
 
 /* İnternet Arşivi Sayfası */
 
+.content-container.internet-container {
+    max-width: var(--mediumWidth);
+}
+    @media only screen and (max-width: 800px) {
+        .content-container.internet-container {
+            max-width: var(--contentWidth);
+        }
+    }
+.content-container.internet-container > * {
+    max-width: var(--contentWidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .internet-archive-list li:first-child {padding-top: 0;}
 .internet-archive-list li:last-child {border: none;}
-.internet-archive-list {
+.content-container.internet-container .internet-archive-list {
     list-style: none;
     list-style-position: inside;
     padding-left: 0;
-}
-.internet-archive-list * {
-    margin: 0;
+    max-width: var(--mediumWidth);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .internet-archive-grid-row {
@@ -356,13 +371,11 @@ CONTENT
     padding-bottom: 15px;
     border-bottom: 1px solid;
     border-color: var(--listDividerColor);
-    font-size: .9em;
 }
 .internet-archive-grid-row .ia-title a {
     display: inline-block;
     margin-right: 7px;
     border-radius: 5px;
-    font-weight: 400;
 }
 .internet-archive-grid-row .ia-credit a {
     display: inline-block;
@@ -397,23 +410,6 @@ CONTENT
     .internet-archive-grid-row div:last-child {
         margin-left: 40px;
     }
-}
-
-/* Copyright */
-
-.copy {
-    color: var(--fadedTextColor);
-    text-align: right;
-    font-size: .8em;
-    font-weight: 200;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 
