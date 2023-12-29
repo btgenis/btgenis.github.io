@@ -87,6 +87,10 @@ ATTRIBUTES
 ---------------------------------------
 */
 
+.no-top-margin {
+    margin-top: 0 !important;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -292,8 +296,32 @@ CONTENT
     margin: 0 auto;
     margin-top: var(--globalTopMargin);
 }
+
 .content-container.wide{
     max-width: var(--largeWidth);
+}
+
+.welcome {
+    position: sticky;
+    top: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: var(--globalTopMargin);
+    padding-bottom: var(--globalTopMargin);
+    z-index: -1;
+}
+.welcome h1 {
+    margin: 0;
+}
+
+.home-vh {
+    background-color: var(--globalBackground);
+    min-height: 90vh;
+}
+.home-vh-inner {
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
 }
 
 /* @media screen and (orientation: portrait) {
