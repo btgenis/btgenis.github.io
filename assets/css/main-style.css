@@ -269,21 +269,6 @@ h1 {
         }
     }
 
-.logo-flexbox {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-.logo-flex-item {
-    text-align: center;
-    line-height: 1.2;
-    color: var(--fadedTextColor);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px dashed;
-    border-color: var(--fadedTextColor);
-}
-
 blockquote {
     border-left: 2px solid;
     border-color: var(--blockquoteBorderColor);
