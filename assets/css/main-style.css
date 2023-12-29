@@ -117,7 +117,7 @@ ATTRIBUTES
 }
 
 .gray {
-    color: gray;
+    color: gray !important;
 }
 
 .narrow {
