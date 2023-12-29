@@ -328,7 +328,7 @@ CONTENT
 
 .home-vh {
     background-color: var(--globalBackground);
-    min-height: 100vh;
+    min-height: 95vh;
 
 }
 .home-vh-inner {
