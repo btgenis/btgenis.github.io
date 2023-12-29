@@ -65,7 +65,7 @@ VARIABLES
             --globalBackground: rgb(25, 25, 25);
             --globalBackgroundWithOpacity: rgba(25, 25, 25, .75);
             --globalFontColor: rgb(240, 240, 240);
-            --globalLinkUnderlineColor: rgba(255,236,61,.3);
+            --globalLinkUnderlineColor: rgba(255,236,61,.2);
             --globalLinkUnderlineColorHover: rgba(255,236,61,.45);
             --fadedTextColor: rgb(70, 70, 70);
             --asteriskColor: rgb(170, 170, 170);
