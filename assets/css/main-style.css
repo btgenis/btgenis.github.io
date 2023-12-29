@@ -328,10 +328,11 @@ CONTENT
 
 .home-vh {
     background-color: var(--globalBackground);
+    min-height: 100vh;
+
 }
 .home-vh-inner {
     position: sticky;
-    min-height: 100vh;
     top: 0;
     padding-top: var(--globalTopMargin);
 }
