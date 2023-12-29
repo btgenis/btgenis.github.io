@@ -88,11 +88,15 @@ ATTRIBUTES
 ---------------------------------------
 */
 
+.no-margin {
+    margin: 0 !important;
+}
+
 .no-top-margin {
     margin-top: 0 !important;
 }
 
-.noselect {
+.no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -243,9 +247,7 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: left;
-    align-items: start;
-    align-content: stretch;
+    align-items: stretch;
     justify-content: space-between;
     margin-bottom: 40px;
 }
@@ -266,6 +268,22 @@ h1 {
             margin-bottom: 3em;
         }
     }
+
+.logo-flexbox {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.logo-flex-item {
+    text-align: center;
+    line-height: 1.2;
+    color: var(--fadedTextColor);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px dashed;
+    border-color: var(--fadedTextColor);
+    margin-bottom: 10px;
+}
 
 blockquote {
     border-left: 2px solid;
