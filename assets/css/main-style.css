@@ -281,6 +281,15 @@ blockquote {
     border-radius: 7px;
 }
 
+.sticky-date {
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px solid;
+    border-color: var(--listDividerColor);
+    position: sticky;
+    top: 0;
+    background: var(--globalBackground);
+}
 
 
 /*
@@ -324,13 +333,6 @@ CONTENT
     padding-top: 10px;
 }
 
-/* @media screen and (orientation: portrait) {
-    .home-vh {
-        min-height: 70vh;
-        min-height: 75svh;
-    }
-} */
-
 /* İnternet Arşivi Sayfası */
 
 .internet-archive-list li:first-child {padding-top: 0;}
@@ -343,15 +345,7 @@ CONTENT
 .internet-archive-list * {
     margin: 0;
 }
-.sticky-date {
-    padding: 15px 0;
-    margin: 0;
-    border-bottom: 1px solid;
-    border-color: var(--listDividerColor);
-    position: sticky;
-    top: 0;
-    background: var(--globalBackground);
-}
+
 .internet-archive-grid-row {
     display: grid;
     grid-template-columns: 2fr 1fr 4fr;
