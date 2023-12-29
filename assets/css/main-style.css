@@ -282,7 +282,6 @@ h1 {
     border-radius: 5px;
     border: 1px dashed;
     border-color: var(--fadedTextColor);
-    margin-bottom: 10px;
 }
 
 blockquote {
