@@ -186,6 +186,11 @@ ELEMENTS
 ---------------------------------------
 */
 
+.sticky-element-pusher {
+    position: sticky;
+    top: 0;
+}
+
 a {
     text-decoration: underline;
     text-decoration-color: var(--globalLinkUnderlineColor);
