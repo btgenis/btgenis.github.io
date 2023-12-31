@@ -212,23 +212,23 @@ a {
     list-style-position: inside;
     padding-left: 0;
 }
-    .custom-unordered-list li {
+    .custom-unordered-list .list-item {
         border-bottom: 1px solid;
         border-color: var(--listDividerColor);
         padding: 20px 0;
     }
-    .custom-unordered-list li:first-child {padding-top: 0;}
-    .custom-unordered-list li:last-child {border: none;}
+    .custom-unordered-list .list-item:first-child {padding-top: 0;}
+    .custom-unordered-list .list-item:last-child {border: none;}
 
-        .custom-unordered-list li .item-title {
+        .custom-unordered-list .list-item .item-title {
             display: block;
             padding-bottom: 10px;
         }
-            .custom-unordered-list li .item-title .work-title {
+            .custom-unordered-list .list-item .item-title .work-title {
                 margin-right: 7px;
             }
             
-        .custom-unordered-list li .comment {
+        .custom-unordered-list .list-item .comment {
             color: gray;
             margin-left: 40px;
         }
@@ -317,33 +317,43 @@ CONTENT
     max-width: var(--largeWidth);
 }
 
+/* Anasayfa */
+
 .welcome {
-    position: sticky;
-    top: 0;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 90px;
+    padding-top: var(--globalTopMargin);
     padding-bottom: 30px;
-    z-index: -1;
 }
 .welcome h1 {
     margin: 0;
 }
 
-.home-vh {
-    background-color: var(--globalBackground);
-    min-height: 100vh;
-    min-height: 100dvh;
+.home-list a {
+    text-decoration: none;
+} .home-list a:hover { opacity: .7;}
+
+.home-list-grid-row {
+    display: grid;
+    grid-template-columns: max-content max-content auto max-content;
+    grid-template-rows: 1fr;
+    grid-column-gap: 5%;
+    grid-row-gap: 0px;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid;
+    border-color: var(--listDividerColor);
+    align-items: start;
 }
-.home-vh-inner {
-    position: sticky;
-    top: 0;
-    padding-top: var(--globalTopMargin);
-    padding-bottom: 70px;
-}
-.home-vh h2 {
-    margin-top: 0;
-}
+    .h-emoji {
+        min-width: 15px;
+    }
+    .h-title {
+        font-weight: 500;
+        min-width: 60px;
+    }
+    .h-desc, .h-arrow {
+        color: gray;
+    }
+
 
 /* İnternet Arşivi Sayfası */
 
