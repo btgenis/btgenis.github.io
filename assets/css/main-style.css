@@ -232,7 +232,7 @@ a {
             color: gray;
             margin-left: 40px;
         }
-.custom-unordered-list.books-list .item-title {
+.custom-unordered-list.book-list .item-title {
     padding-top: 10px;
     position: sticky;
     top: 0;
