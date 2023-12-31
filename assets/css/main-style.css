@@ -173,17 +173,21 @@ ATTRIBUTES
 }
 
 .icon-flexbox {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
 }
 .inline-icon::before,.inline-icon::after {
     font-family: 'Material Symbols Outlined';
     font-size: 1.1em;
+    color: var(--asteriskColor);
 }
 .inline-icon.arrow-left::before {
     content: '\E5C4';
+}
+.inline-icon.arrow-right::after {
+    content: '\E5C8';
 }
 
 .rating {
