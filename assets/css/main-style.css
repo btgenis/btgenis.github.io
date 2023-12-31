@@ -393,7 +393,7 @@ CONTENT
     }
     .h-title {
         font-weight: 500;
-        min-width: 60px;
+        min-width: 65px;
     }
     .h-desc, .h-arrow {
         color: gray;
