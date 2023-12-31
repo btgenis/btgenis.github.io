@@ -356,6 +356,11 @@ CONTENT
 .welcome h1 {
     margin: 0;
 }
+@media only screen and (max-width: 500px) {
+    .welcome {  
+        font-size: .9em;
+    }
+}
 
 .home-list a {
     text-decoration: none;
