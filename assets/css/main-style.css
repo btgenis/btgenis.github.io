@@ -329,7 +329,7 @@ CONTENT
 
 .home-list a {
     text-decoration: none;
-} .home-list a:hover { opacity: .7;}
+} .home-list a:hover {opacity: .6;}
 
 .home-list-grid-row {
     display: grid;
