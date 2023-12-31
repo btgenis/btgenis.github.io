@@ -325,6 +325,10 @@ blockquote {
 .sticky-date {
     padding: 15px 0;
     margin: 0;
+    margin-left: -2px;
+    padding-left: 2px;
+    margin-right: -2px;
+    padding-right: 2px;
     border-bottom: 1px solid;
     border-color: var(--listDividerColor);
     position: sticky;
