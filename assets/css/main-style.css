@@ -338,7 +338,7 @@ CONTENT
     grid-column-gap: 5%;
     grid-row-gap: 0px;
     padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 15px !important;
     border-bottom: 1px solid;
     border-color: var(--listDividerColor);
     align-items: start;
