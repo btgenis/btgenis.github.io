@@ -188,9 +188,9 @@ ATTRIBUTES
 .icon-flexbox {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 5px;
 }
-
 .inline-icon::before,.inline-icon::after {
     font-family: 'Material Symbols Outlined';
     font-size: 1.1em;
