@@ -343,8 +343,9 @@ CONTENT
     border-color: var(--listDividerColor);
     align-items: start;
 }
-    .h-emoji {
+    .h-icon {
         min-width: 15px;
+        color: gray;
     }
     .h-title {
         font-weight: 500;
