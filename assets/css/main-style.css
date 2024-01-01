@@ -94,6 +94,12 @@ ATTRIBUTES
 ---------------------------------------
 */
 
+.no-list-style {
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
 .no-margin {
     margin: 0 !important;
 }
