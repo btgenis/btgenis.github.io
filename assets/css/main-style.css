@@ -269,9 +269,16 @@ a {
         }
 .custom-unordered-list.book-list .item-title {
     padding-top: 10px;
+    overflow: hidden;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
     position: sticky;
     top: 0;
-    background: var(--globalBackground);
+    background: var(--footerBackgroundColor);
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -324,17 +331,21 @@ blockquote {
 }
 
 .sticky-date {
-    padding: 15px 0;
-    margin: 0;
-    margin-left: -2px;
-    padding-left: 2px;
-    margin-right: -2px;
-    padding-right: 2px;
-    border-bottom: 1px solid;
-    border-color: var(--listDividerColor);
+    overflow: hidden;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
     position: sticky;
     top: 0;
-    background: var(--globalBackground);
+    background: var(--footerBackgroundColor);
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+} .sticky-date * {
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid;
+    border-color: var(--listDividerColor);
 }
 
 
@@ -528,11 +539,11 @@ FOOTER
 */
 
 footer {
-    background: var(--footerBackgroundColor);
     position: fixed;
     left: 0; right: 0; bottom: 0;
     transform: translateY(2px);
     padding: 15px 15px;
+    background: var(--footerBackgroundColor);
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
     color: var(--footerTextColor);
