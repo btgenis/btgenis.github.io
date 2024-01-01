@@ -94,6 +94,10 @@ ATTRIBUTES
 ---------------------------------------
 */
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .no-list-style {
     list-style: none;
     list-style-position: inside;
@@ -336,7 +340,8 @@ blockquote {
 }
 
 .gray-box {
-    display: inline-block;
+    display: block;
+    width: max-content;
     background-color: var(--grayBoxColor);
     padding: 10px 15px;
     border-radius: 7px;
@@ -360,6 +365,13 @@ blockquote {
     border-color: var(--listDividerColor);
 }
 
+details summary {
+    font-weight: 400;
+}
+details p {
+    margin-left: 15px;
+    color: gray;
+}
 
 /*
 ---------------------------------------
