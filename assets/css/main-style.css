@@ -282,6 +282,11 @@ a {
             color: gray;
             margin-left: 40px;
         }
+        @media only screen and (max-width: 500px) {
+            .custom-unordered-list .list-item .comment {
+                margin-left: 20px;
+            }
+        }
 .custom-unordered-list.book-list .list-item {
     padding-top: 10px;
 }
@@ -557,7 +562,7 @@ CONTENT
         content: "@ ";
     }
     .internet-archive-grid-row div:last-child {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 }
 
