@@ -75,7 +75,7 @@ VARIABLES
             --globalLinkUnderlineColor: rgba(255,236,61,.2);
             --globalLinkUnderlineColorHover: rgba(255,236,61,.45);
             --fadedTextColor: rgb(70, 70, 70);
-            --asteriskColor: rgb(170, 170, 170);
+            --asteriskColor: gray;
             --listDividerColor: rgb(45, 45, 45);
             --ratingColor: rgb(155, 155, 155);
             --grayBoxColor: rgb(40, 40, 40);
@@ -236,6 +236,17 @@ ELEMENTS
 
 ---------------------------------------
 */
+
+.logo {
+    color: var(--asteriskColor); /* Logo Rengi */
+    width: 10px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-left: 2px;
+    pointer-events: none;
+    width: 18px;
+    height: auto;
+}
 
 a {
     text-decoration: underline;
