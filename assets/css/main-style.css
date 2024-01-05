@@ -535,7 +535,7 @@ CONTENT
         background-color: rgba(255, 0, 0, 0.5);
         color: white;
     }
-    .internet-archive-grid-row .ia-title span.website::before {
+    .internet-archive-grid-row .ia-title span.site::before {
         content: "Site";
         background-color: rgba(162, 0, 162, 0.6);
         color: white;
