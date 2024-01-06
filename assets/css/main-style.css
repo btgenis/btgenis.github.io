@@ -595,9 +595,11 @@ footer {
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
     color: var(--footerTextColor);
+    cursor: default;
 }
     footer a {
         text-decoration: none;
+        cursor: pointer;
     }
     footer a:hover {
         color: var(--footerLinkColorHover);
