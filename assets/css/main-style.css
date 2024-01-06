@@ -393,8 +393,12 @@ details summary {
     font-weight: 400;
 }
 details p {
-    margin-left: 15px;
+    margin-left: 40px;
     color: gray;
+} @media only screen and (max-width: 500px) {
+    details p {
+        margin-left: 20px;
+    }
 }
 
 /*
