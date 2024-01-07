@@ -41,6 +41,9 @@ GLOBAL
     line-height: 1.5;
     color: var(--globalFontColor);
 }
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
 
     /* Dark Mode */
     @media (prefers-color-scheme: dark){
