@@ -396,14 +396,16 @@ blockquote {
 }
 
 details summary {
-    font-weight: 400;
+    font-weight: 100;
     margin-bottom: 10px;
-    margin-left: 6px;
     color: var(--fadedTextColor);
     transition: .3s ease;
 }
+details summary::-webkit-details-marker {
+    display: none;
+}
 details summary:hover {
-    color: var(--globalFontColor);
+    color: gray;
 }
 details .details-inner-box {
     color: gray;
@@ -411,12 +413,6 @@ details .details-inner-box {
     border-color: var(--listDividerColor);
     border-radius: 10px;
     padding: 0 15px;
-}
-details[open] > summary{
-    color: var(--globalFontColor);
-}
-details[open] > summary:hover{
-    opacity: .5;
 }
 
 /*
