@@ -398,6 +398,7 @@ blockquote {
 details summary {
     font-weight: 400;
     margin-bottom: 10px;
+    margin-left: 6px;
     color: var(--fadedTextColor);
     transition: .3s ease;
 }
