@@ -76,7 +76,6 @@ body {
     padding-bottom: 70px !important;
     margin-left: 15px;
     margin-right: 15px;
-    transition: 0.3s ease-out;
 }
 
 
@@ -396,20 +395,20 @@ blockquote {
 }
 
 details summary {
-    font-weight: 400;
+    font-weight: 200;
     margin-bottom: 10px;
-    color: var(--asteriskColor);
+    color: var(--fadedTextColor);
     transition: .3s ease;
     display: block;
     max-width: max-content;
     margin-left: auto;
-    margin-right: 0;
+    margin-right: 2px;
 }
 details summary::-webkit-details-marker {
     display: none;
 }
 details summary:hover {
-    color: var(--fadedTextColor);
+    color: gray;
 }
 details .details-inner-box {
     color: gray;
@@ -417,12 +416,6 @@ details .details-inner-box {
     border-color: var(--listDividerColor);
     border-radius: 10px;
     padding: 0 15px;
-}
-details[open] > summary {
-    color: var(--fadedTextColor);
-}
-details[open] > summary:hover {
-    opacity: .6;
 }
 
 /*
