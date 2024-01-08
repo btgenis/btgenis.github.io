@@ -397,10 +397,25 @@ blockquote {
 
 details summary {
     font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--fadedTextColor);
+    transition: .3s ease;
 }
-details p {
-    margin-left: 15px;
+details summary:hover {
+    color: var(--globalFontColor);
+}
+details .details-inner-box {
     color: gray;
+    border: 1px solid;
+    border-color: var(--listDividerColor);
+    border-radius: 10px;
+    padding: 0 15px;
+}
+details[open] > summary{
+    color: var(--globalFontColor);
+}
+details[open] > summary:hover{
+    opacity: .5;
 }
 
 /*
