@@ -370,11 +370,11 @@ blockquote {
 }
 
 .gray-box {
-    display: block;
-    width: max-content;
+    display: inline-block;
     background-color: var(--grayBoxColor);
     padding: 10px 15px;
     border-radius: 7px;
+    margin-top: 0;
 }
 
 .sticky-date {
