@@ -400,6 +400,7 @@ details summary {
     margin-bottom: 10px;
     color: var(--fadedTextColor);
     transition: .3s ease;
+    display: inline-block;
 }
 details summary::-webkit-details-marker {
     display: none;
