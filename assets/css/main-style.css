@@ -345,6 +345,12 @@ section.lines {
     min-height: 70vh;
     margin-bottom: 1rem;
     max-width: var(--wXLarge);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .error-page section.lines {
     background: repeating-linear-gradient(to right, var(--listDividerColor), var(--listDividerColor) 1px, var(--globalBackground) 1px, var(--globalBackground) 15px);
