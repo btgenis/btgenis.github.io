@@ -352,7 +352,7 @@ section.lines {
 }
 .contact-page section.lines {
     min-height: 40vw;
-    margin-right: 15px;
+    margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wLarge);
 }
