@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="tr">
-<!-- 
-
-    Designed by github.com/btgenis
-    
--->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="B. T. Geniş'in kişisel blogu.">
-    <title>B. T. Geniş</title>
+    <title>B. T. Geniş — Blog</title>
     <link rel="stylesheet" href="assets/css/main-style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <!-- Favicon -->
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="assets/images/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-    <!-- END OF Favicon -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J49DJ2PSVZ"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,71 +23,238 @@
 
     gtag('config', 'G-J49DJ2PSVZ');
     </script>
-    <!-- END OF Google tag -->
-    <!-- Google Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
-    <!-- END OF Google Material Icons -->
-    <!-- Font Inter -->
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <!-- END OF Font Inter -->
 </head>
-<body id="top" class="no-top-margin">
-    <div class="content-container no-top-margin">
-        <div class="welcome">
-            <!-- Logo -->
-                <svg class="logo no-select" viewBox="0 0 6.614583 6.6145801" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <defs id="defs1" /> <g id="layer1" transform="translate(-68.179605,-117.90755)"> <path id="rect15" style="fill:currentcolor;fill-rule:evenodd;stroke-width:0.0755194" d="m 68.179605,117.90755 v 6.61458 h 3.750329 v -3.30733 -3.30725 z m 3.750329,0 2.864254,1.65362 v -1.65362 z m 2.864254,1.65362 -2.864254,1.65363 2.864254,1.65371 z m 0,3.30734 -2.864254,1.65362 h 2.864254 z" /> </g></svg>
-            <!-- END OF Logo -->
-            <h1>Burası internetteki köşe<a href="https://instagram.com/btgenis">m</a>. <span class="faded">Küçük bir blog ya da bir arşiv. İnternetin eski günlerine duyulan özlemle çalışmaktadır.</span></h1>
-        </div>
-        <ul class="custom-unordered-list home-list">
-            <a href="pages/filmler" class="list-item home-list-grid-row">
-                <div class="h-icon no-select"><span class="material-symbols-outlined">theaters</span></div>
-                <div class="h-title">Filmler</div>
-                <div class="h-desc">Son zamanlarda seyrettiğim filmler...</div>
-                <div class="h-arrow no-select"><span class="material-symbols-outlined">arrow_forward</span></div>
-            </a>
-            <a href="pages/kitaplar" class="list-item home-list-grid-row">
-                <div class="h-icon no-select"><span class="material-symbols-outlined">book_2</span></div>
-                <div class="h-title">Kitaplar</div>
-                <div class="h-desc">Son zamanlarda okuduğum kitaplar...</div>
-                <div class="h-arrow no-select"><span class="material-symbols-outlined">arrow_forward</span></div>
-            </a>
-            <!-- <a href="pages/internet" class="list-item home-list-grid-row">
-                <div class="h-icon no-select"><span class="material-symbols-outlined">language</span></div>
-                <div class="h-title">İnternet</div>
-                <div class="h-desc">Son zamanlarda internette bulduklarım...</div>
-                <div class="h-arrow no-select"><span class="material-symbols-outlined">arrow_forward</span></div>
-            </a> -->
-        </ul>
-        <div class="standard-space-three"></div>
-        <!-- <div class="copy no-select">
-            <span class="material-symbols-outlined">cut </span>
-            <span>designed by <a href="https://github.com/btgenis" class="plain-link">btgenis</a></span>
-        </div> -->
-        <details>
-            <summary class="cursor-pointer">&#57650;</summary>
-            <div class="details-inner-box">
-                <p>Merhaba &#x1f590;&#x1f3fb;<br>ben Bedirhan Tarık Geniş,</p>
-                <p>Daha önce çok sayıda blog açmıştım, beni tanıyorsanız bunlardan birkaçını hatırlıyor olabilirsiniz. Bu bloglar genelde filmler ve kitaplar üzerineydi ve uzun yazılar içeriyorlardı.</p>
-                <p>Burayı ise bir <em>microblog</em> ya da bir arşiv olarak kullanıyorum. İnternetteki adresim denebilir. Aslında siteyi açmamdaki en büyük etken herhangi bir şablon veya tema kullanmadan yeni bir CSS projesi yapmak istememdi. Bu yazıyı yazdığım an itibarıyla projeyi tamamlanmış sayıyorum.</p>
-                <p>Bu siteyi GitHub'da bir Pages sitesi olarak barındırıyorum. Kullandığım bir Jekyll teması yok fakat genel tasarımı kullanmak isterseniz site dosyaları <a href="https://github.com/btgenis/btgenis.github.io">repository</a>'de herkese açık şekilde yayınlanıyor. Site temasını repository sayfasında belirtilen MIT lisansına uymak koşuluyla (bana kredi vererek) dilediğiniz gibi kullanabilirisniz. (Yalnızca, özelleştirmek biraz yorucu olacaktır :^)</p>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://btgenis.com/" class="logo noselect"><img src="assets/images/logo.svg" alt="" width="15px"></a>
+            <details class="question">
+                <summary class="noselect">&#57650;</summary>
+                <div class="answer">
+                    <p>Site ve tasarım hakkında:</p>
+                    <p>Daha önce çok sayıda blog açtım, beni tanıyorsanız bunlardan birkaçını hatırlıyor olabilirsiniz. Bu bloglar genelde filmler ve kitaplar üzerineydi ve uzun yazılar içeriyorlardı.</p>
+                    <p>Burayı ise bir <em>microblog</em> ya da bir arşiv olarak kullanıyorum. İnternetteki adresim denebilir. Aslında siteyi açmamdaki en büyük etken herhangi bir şablon veya tema kullanmadan yeni bir CSS projesi yapmak istememdi. Bu yazıyı yazdığım an itibarıyla projeyi tamamlanmış sayıyorum.</p>
+                    <p>Bu siteyi GitHub'da bir Pages sitesi olarak barındırıyorum. Kullandığım bir Jekyll teması yok fakat genel tasarımı kullanmak isterseniz site dosyaları <a href="https://github.com/btgenis/btgenis.github.io">repository</a>'de herkese açık şekilde yayınlanıyor. Site temasını repository sayfasında belirtilen MIT lisansına uymak koşuluyla (bana kredi vererek) dilediğiniz gibi kullanabilirisniz. (Yalnızca, özelleştirmek biraz yorucu olacaktır :^)</p>
+                </div>
+            </details>
+        </header>
+        <main class="w-s">
+            <p>Merhaba, ben <a href="https://instagram.com/btgenis/">B. T. Geniş</a>. <span class="gray">Burası internetteki köşem; küçük bir blog ya da bir arşiv. İnternetin eski günlerine duyulan özlemle çalışmaktadır.</span></p>
+            <p class="flex row">
+                <a href="#filmler">Filmler &#8628;</a>
+                <span>&bull;</span>
+                <a href="#kitaplar">Kitaplar &#8628;</a></p>
+        </main>
+        <section class="lines"></section>
+        <section>
+            <h1 id="filmler">Filmler</h1>
+            <p class="w-s">Son zamanlarda seyrettiğim filmlerin bir listesi. Tüm oylamalar için: <a href="https://letterboxd.com/btgenis/films/diary/">Letterboxd &#8594;</a></p>
+            <hr class="space-1">
+            <div class="list-area">
+                <div class="period">
+                    <div class="date"><h1>Aralık 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0213847/?ref_=ext_shr_lnk">Malena (2000), Giuseppe Tornatore</a></span>
+                            <span class="rating seven fav"></span>
+                            <span class="desc">Komedi olarak başlayıp drama dönüşen, daha önce gördüklerime benzemeyen bir film. Başta Malena Scordia ve diğer kasabalıları bir komedi unsuru olarak gören seyirci, film ilerledikçe kendini gösteren drama bakakalıyor. Castelcuto sakinlerinin sıkça yaptığı gibi.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Kasım 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt13287846/?ref_=ext_shr_lnk">Napoleon (2023), Ridley Scott</a></span>
+                            <span class="rating six"></span>
+                            <span class="desc">Film bir klip şovu gibiydi. Art arda kısa klipler seyrediyoruz. Tarihteki en enteresan hikayelerden birinin bu şekilde harcanması şaşırtıcı. Yine de üstün sinematografi hatrına 3/5 vermek istedim.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Ekim 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0063522/?ref_=ext_shr_lnk">Rosemary's Baby (1968), Roman Polanski</a></span>
+                            <span class="rating nine fav"></span>
+                            <span class="desc">Uzun süre sonra seyrettiğim en iyi film. Kamera kullanımı ve Mia Farrow'un oyunculuğu mükemmel.</span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0369339/?ref_=ext_shr_lnk">Collateral (2004), Michael Mann</a></span>
+                            <span class="rating seven"></span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0119643/?ref_=ext_shr_lnk">Meet Joe Black (1998), Martin Brest</a></span>
+                            <span class="rating seven"></span>
+                            <span class="desc">Fena bir film değil. Kesinlikle daha kısa olabilirdi.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Eylül 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0071315/?ref_=ext_shr_lnk">Chinatown (1974), Roman Polanski</a></span>
+                            <span class="rating eight fav"></span>
+                            <span class="desc">Seyrettiğim en iyi filmlerden. Fakat dikkat: biraz karanlık.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Ağustos 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0154506/?ref_=ext_shr_lnk">Following (1998), Christopher Nolan</a></span>
+                            <span class="rating seven"></span>
+                            <span class="desc">Nolan'ın ilk filmi. Sonraki filmlerinden aşina olduğumuz motifler seçilebiliyor. Seyretmesi keyifliydi.</span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0053198/?ref_=ext_shr_lnk">The 400 Blows (1959), François Truffaut</a></span>
+                            <span class="rating eight fav"></span>
+                            <span class="desc">Çocuk perspektifinden çekilmiş en iyi filmlerden biri olabilir.</span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0062622/?ref_=ext_shr_lnk">2001: A Space Odyssey (1968), Stanley Kubrick</a></span>
+                            <span class="rating eight fav"></span>
+                            <span class="desc">Favori filmlerimden biri. Üçüncü seyredişim olabilir ¯\_(ツ)_/¯</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Temmuz 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0139654/?ref_=ext_shr_lnk">Training Day (2001), Antoine Fuqua</a></span>
+                            <span class="rating seven"></span>
+                            <span class="desc">Eğlenceli bir film. Fakat olaylar dizisi konusunda bazı unsurlar daha iyi olabilirdi.</span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt15398776/?ref_=ext_shr_lnk">Oppenheimer (2023), Christopher Nolan</a></span>
+                            <span class="rating eight"></span>
+                            <span class="desc">İyi bir film. Sinemaya gitmeye değdi. Belki daha kısa olabilirdi.</span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0217505/?ref_=ext_shr_lnk">Gangs of New York (2002), Martin Scorsese</a></span>
+                            <span class="rating seven"></span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt4034228/?ref_=ext_shr_lnk">Manchester by the Sea (2016), Kenneth Lonergan</a></span>
+                            <span class="rating eight"></span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0134119/?ref_=ext_shr_lnk">The Talented Mr. Ripley (1999), Anthony Minghella</a></span>
+                            <span class="rating seven fav"></span>
+                            <span class="desc">Harika stil, daha iyi işlenebilecek bir hikaye.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Haziran 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0056172/?ref_=ext_shr_lnk">Lawrence of Arabia (1962), David Lean</a></span>
+                            <span class="rating seven"></span>
+                            <span class="desc">1962 yılından bir filmin bu kadar iyi görselleri olacağı aklıma gelmezdi. Daha kısa olabilirdi. Elbette beklenildiği gibi, bugün <em>problematik</em> sayılacak unsurlar yok değil.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="period">
+                    <div class="date"><h1>Nisan 2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.imdb.com/title/tt0072890/?ref_=ext_shr_lnk">Dog Day Afternoon (1975), Sidney Lumet</a></span>
+                            <span class="rating seven"></span>
+                            <span class="desc">Beklediğimden iyi ve sürükleyiciydi. Başka zamanlara ait bir film, artık görmediğimiz soydan. Denk gelirsem tekrar seyrederim.</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </details>
-
+        </section>
+        <section class="lines"></section>
+        <section>
+            <h1 id="kitaplar">Kitaplar</h1>
+            <p class="w-s">Son zamanlarda okumaktan keyif aldığım kitapların bir listesi.</p>
+            <hr class="space-1">
+            <div class="list-area">
+                <div class="period">
+                    <div class="date"><h1>2023</h1></div>
+                    <ul class="list">
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=bütün+şiirleri+t+s+eliot+everest+yayınları&ie=UTF-8&oe=UTF-8">Bütün Şiirleri, T. S. Eliot</a> <span class="gray">(Everest Yayınları)</span></span>
+                            <span class="desc">
+                                <p>T. S. Eliot'ın <a href="https://www.google.com/search?client=safari&rls=en&q=the+love+song+of+j+alfred+prufrock&ie=UTF-8&oe=UTF-8">Prufrock</a>'ına nerede denk geldim hatırlamıyorum. Şiir hemen beni kendine çekti ve daha fazla T. S. Eliot aramaya başladım. Bir kitapçıda bu kitabı bulana kadar Faber Poetry'nin "<a href="https://www.google.com/search?client=safari&rls=en&q=collected+poems+of+t+s+eliot+faber+poetry&ie=UTF-8&oe=UTF-8">Collected Poems, 1909-1962</a>" başlıklı bir e-kitabıyla idare ediyordum. Everest Yayınları, bölüm aralarında fotoğraflar bulunan güzel bir İngilizce-Türkçe baskı yapmış.</p>
+                                <p>Eliot modernist edebiyatın öncülerinden. Şiirleri gerçek, derinliğe sahip, 'güzel', 'çirkin' (veya <em>modernist</em>), yer yer karmaşık bir yapıda ve her zaman ustaca kullanılmış bir dille yazılmış. Düşünmeden alınabilecek bir derleme olmuş.</p>
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=on+love+by+alain+de+botton&ie=UTF-8&oe=UTF-8">On Love, Alain de Botton</a></span>
+                            <span class="desc">
+                                Yarı roman, yarı meditasyonlar kitabı. Fakat roman beklentisiyle okunmamalı. Yazar, muhtemelen yüksek derecede otobiyografik olacak şekilde, geçmiş ilişkilerinden birini —ve muhtemelen ilk aşkını— anlatıyor. Heyecan verici bir olay örgüsü aranmamalı çünkü odak noktasındaki konu sıradan bir ilişki, bu ilişkinin başlangıcı, ilerleyişi, karşılaştığı engeller ve sonu — belki de <em>yıkılışı.</em> Alain de Botton'un, kendisinin de içine düşmekten kurtulamadığı, 'romantik aşk'a yaptığı eleştriler duyulmadık şeyler olmasa da, hiç duymamış çok kişi çıkacaktır sanıyorum.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=woodcutters+by+thomas+bernhard&ie=UTF-8&oe=UTF-8">Woodcutters, Thomas Bernhard</a></span>
+                            <span class="desc">
+                                Klasik Thomas Bernhard tarzında, baştan sona tek paragraf. <em>Yine</em> bir intihar haberi ve anlatıcının durmayan düşünceleri... Yirminci yüzyılın ikinci yarısında Viyana sanat camiasını yakından tanımış Bernhard'ın bu çevreye sert bir eleştrisi. <em>Sanatsal deha</em>, <em>umut</em> ve bunların yok oluşu... Anlatıcının entelektüel yolculuğuna yeni başlamış bir gençken büyük saygı duyduğu isimlerin yıllar içinde gözünden nasıl düştüğünü okuyoruz. Yazarın düşüncelerini okumaktan alınan zevkin doruk noktasına ulaştığı kitaplardan. Fakat Bernhard'da bulunacak olanın biraz karanlık olacağı unutulmamalı. David McLintock çevirisini okudum ve başarılı buldum.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=the+flame+by+leonard+cohen&ie=UTF-8&oe=UTF-8">The Flame, Leonard Cohen</a></span>
+                            <span class="desc">
+                                Leonard Cohen'in 2016'daki ölümünden iki yıl sonra, 2018'de yayımlanmış bir şiir derlemesi. Defterlerindeki çizimlere de yer verilmesi çok güzel olmuş.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=bozkırkurdu+herman+hesse&ie=UTF-8&oe=UTF-8">Bozkırkurdu, Herman Hesse</a></span>
+                            <span class="desc">
+                                Övüldüğü kadar olduğunu düşünüyorum. Büyülü bir anlatısı var ve okuyucuyu sürüklüyor. Yazarının felsefesini yansıtan kitaplardan. Yanlış anlaşılmaya müsait: Hesse'e göre en yanlış anlaşılmış kitabı. Sonuna kadar bir özeleştiri, arayış.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=50+great+short+stories+milton+crane&ie=UTF-8&oe=UTF-8">50 Great Short Stories, Milton Crane</a><span class="gray"> (Editör)</span></span>
+                            <span class="desc">
+                                Bir kitapçıda denk geldim ve ebatlarına göre <em>(kitap palto cebine sığıyor)</em> yüksek bir ücret ödeyerek aldım. Fakat kitap her kuruşun hakkını veriyor. 500'ün üzerinde İngiliz Edebiyatı profesörüne danışılarak İngilizce dilinde basılmış 100 hikaye arasından en iyi 50'si seçilmiş. Hikayelerin neredeyse hepsi mükemmel.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=a+portrait+of+the+artist+as+a+young+man+by+james+joyce&ie=UTF-8&oe=UTF-8">A Portrait of the Artist as a Young Man, James Joyce</a></span>
+                            <span class="desc">
+                                Joyce'un okuması en rahat eseri olmalı. Yine de yer yer zorluyor. Joyce'un edebi <em>alter ego</em>'su Stephen Dedalus'un çocukluğu, gençliği, entelektüel gelişimi...
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=seneler+annie+ernaux&ie=UTF-8&oe=UTF-8">Seneler, Annie Ernaux</a></span>
+                            <span class="desc">
+                                Annie Ernaux'nun başka bir kitabı. Yine otobiyografik. Bu sefer aynı zamanda bir Fransa yakın tarihi gibi de. Fakat Fransa yakın tarihine ilişkin detaylar, belki yeterince yaşlı olmadığımdan, ilgimi çekmedi. Dönemle ilgilenmemiş kişiler için havada kalacak referanslarla dolu bir kitap. Yine de iyi bir okuma.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=olay+annie+ernaux&ie=UTF-8&oe=UTF-8">Olay, Annie Ernaux</a></span>
+                            <span class="desc">
+                                2022 Nobel Edebiyat Ödülünü kazanan Annie Ernaux'nun üniversite yıllarında yaşadığı kürtaj deneyimini anlattığı otobiyografik bir roman. Elbette o dönemin Fransa'sında kürtaj yasak: hatta birine gebe olduğunuzu söylemeniz bile tehlikeli, çünkü <em>zamanı geldiğinde</em> kucağınızda bir bebekle ortaya çıkmazsanız kürtaj yaptırdığınız şüphesiyle yetkililere bildirildiğiniz bir ortam mevcut. Annie Ernaux tüm ayrıntılarıyla acı deneyimini paylaşıyor ve bu kesinlikle kitabı okumaya değer kılıyor.
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="title"><a href="https://www.google.com/search?client=safari&rls=en&q=iyinin+ve+kötünün+ötesinde+friedrich+nietzsche&ie=UTF-8&oe=UTF-8">İyinin ve Kötünün Ötesinde, Friedrich Nietzsche</a></span>
+                            <span class="desc">
+                                Nietzsche'nin en erişilebilir kitabına geri döndüm. Dört sene ve felsefe tarihi okumalarından sonra çok daha iyi anladığımı düşünüyorum. Geleneksel Batı düşüncesinin <em>iyi</em> ve <em>kötü</em> anlayışına bir saldırı. En sorgulanmayan dogmaları sorgulamayı teklif ediyor. Pagan paradigmasından Hristiyanlık paradigmasına geçiş ve ahlakın kökeni konuları ilginizi çekiyorsa iyi bir kitap. Alışılagelmişin dışındaki üslup ve aforizma kısımları size göre değilse bile bir kez okumaya değecek kadar önemli bir eser. Nietzsche —veya herhangi bir filozofu— okurken <a href="https://plato.stanford.edu/">Stanford Felsefe Portalı</a> gibi kaynaklardan yararlanmanız önerilir.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="lines"></section>
     </div>
-    <footer>
-        <div class="footer-flex-container">
-            <div class="footer-flex-item"><a href="https://btgenis.github.io">B. T. Geniş</a></div>
-            <div class="footer-flex-item">
-                <ul class="footer-navigation">
-                    <li><a href="pages/filmler">Film</a></li>
-                    <li><a href="pages/kitaplar">Kitap</a></li>
-                    <!-- <li><a href="pages/internet">Web</a></li> -->
-                    <li><a href="pages/iletisim">İletişim</a></li>
-                </ul>
-            </div>
-        </div>
+    <footer class="noselect">
+        <nav>
+            <div class="site-title"><a href="https://btgenis.com/">B. T. Geniş</a></div>
+            <ul>
+                <li><a href="#filmler">Filmler</a></li>
+                <li><a href="#kitaplar">Kitaplar</a></li>
+                <li><a href="iletisim">İletişim</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
