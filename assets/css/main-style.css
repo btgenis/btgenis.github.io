@@ -357,7 +357,7 @@ section.lines {
     min-height: 50vh;
 }
 .contact-page section.lines {
-    min-height: 40vw;
+    min-height: 40vh;
     margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wLarge);
@@ -406,7 +406,6 @@ MEDIA RULES
         gap: 1rem;
     }
     .contact-page section.lines {
-        min-height: 50vh;
         margin-right: unset;
     }
     .contact-page section.card {
