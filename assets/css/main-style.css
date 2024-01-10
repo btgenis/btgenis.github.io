@@ -54,6 +54,7 @@ html {
     -ms-text-size-adjust: 100%;
     background: var(--globalBackground);
     color: var(--globalFontColor);
+    scroll-behavior: smooth;
 }
 
 body {
