@@ -362,7 +362,8 @@ section.lines {
     min-height: 50vh;
 }
 .contact-page section.lines {
-    min-height: 40vh;
+    min-height: 10rem;
+    height: 40vh;
     margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wLarge);
