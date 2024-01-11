@@ -19,6 +19,7 @@ GLOBAL
     --globalBackground: rgb(255, 255, 255);
     --globalBackgroundOpacity: rgb(255, 255, 255, .7);
     --globalFontColor: rgb(25, 25, 25);
+    --grayFont: rgb(98, 98, 98);
     --listDividerColor: rgb(230, 230, 230);
     --linkUnderlineColor: rgba(255, 255, 0, 0.4);
     --linkUnderlineColorHover: rgba(255, 255, 0, 0.9);
@@ -34,6 +35,7 @@ GLOBAL
             --globalBackground: rgb(25, 25, 25);
             --globalBackgroundOpacity: rgb(25, 25, 25, .7);
             --globalFontColor: rgb(240, 240, 240);
+            --grayFont: rgb(158, 158, 158);
             --listDividerColor: rgb(40, 40, 40);
             --linkUnderlineColor: rgba(255, 255, 0, 0.2);
             --linkUnderlineColorHover: rgba(255, 255, 0, 0.6);
@@ -127,7 +129,7 @@ ATTRIBUTES
     font-size: small !important;
 }
 
-.gray {color: gray;}
+.gray {color: var(--grayFont);}
 
 .faded {color: var(--listDividerColor);}
 
@@ -227,10 +229,10 @@ header {
         transition: .3s ease;
     }.question > summary::-webkit-details-marker {display: none;}
     .question summary:hover {
-        color: gray;
+        color: var(--grayFont);
     }
     details[open] > summary {
-        color: gray;
+        color: var(--grayFont);
     }
     .question .answer {
         background: var(--globalBackground);
@@ -239,7 +241,7 @@ header {
         border-color: var(--listDividerColor);
         border-radius: .5rem;
         box-shadow: inset 0 5px 10px var(--boxShadowColor);
-        color: gray;
+        color: var(--grayFont);
     }
     .question .answer p:last-child {
         margin-bottom: 0;
@@ -276,7 +278,7 @@ section > h1 {
 }
     .date {
         padding-top: 0;
-        color: gray;
+        color: var(--grayFont);
     }
         .date h1 {
             position: sticky;
@@ -292,11 +294,14 @@ section > h1 {
     } .item:last-child {
         border: none;
     }
+        .title {
+            margin-right: .2em;
+        }
         .rating {
             color: var(--ratingColor);
         }
         .desc {
-            color: gray;
+            color: var(--grayFont);
             display: block;
             margin-top: .7rem;
             max-width: var(--wMedium);
