@@ -376,14 +376,15 @@ section.lines {
     height: 35vh;
     margin-right: 30px;
     margin-bottom: 0;
-    max-width: var(--wLarge);
+    max-width: var(--wMedium);
 }
 .contact-page section.card {
     background: var(--grayBoxColor);
     margin-left: 45px;
     margin-top: -6rem;
-    max-width: var(--wLarge);
-    min-height: 22vw;
+    max-width: var(--wMedium);
+    min-height: 12rem;
+    height: 22vw;
     padding: 1rem 1rem 1rem 3rem;
     display: flex;
     flex-direction: column;
