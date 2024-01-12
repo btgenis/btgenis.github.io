@@ -164,6 +164,12 @@ a.plain-link:hover * {opacity: .5;}
 .space-3 {height: 3rem;}
 .space-6 {height: 6rem;}
 
+hr.divider {
+    border-bottom: 1px solid !important;
+    border-color: var(--listDividerColor);
+    margin: 1rem 0;
+}
+
 :target {
     border-radius: .5rem;
     animation-name: targetAnimation;
@@ -383,10 +389,7 @@ section.lines {
     flex-direction: column;
     justify-content: space-between;
 }
-.contact-page section.card > div{
-    min-height: 100px;
-}
-.contact-page section.card hr {
+.contact-page section.card hr#black {
     height: 30px;
     background-color: var(--globalBackground);
 }
