@@ -262,6 +262,10 @@ section > h1 {
     font-weight: 600;
 }
 
+.list-area p {
+    margin-bottom: .7rem;
+}
+
 .period {
     display: grid;
     grid-template-columns: 110px auto;
@@ -405,8 +409,8 @@ MEDIA RULES
             border-bottom: 1px solid var(--listDividerColor);
             margin-bottom: -1px;
         }
-        .list {
-            margin-left: 30px;
+        .desc {
+            margin-left: .7rem;
         }
     footer nav ul {
         gap: 1rem;
