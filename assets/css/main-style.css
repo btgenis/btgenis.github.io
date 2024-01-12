@@ -118,6 +118,16 @@ ul {
 .flex.space-between {
     justify-content: space-between;
 }
+.flex.align-end {
+    align-items: flex-end;
+}
+.flex.align-center {
+    align-items: center;
+}
+.flex.center {
+    align-items: center;
+    justify-content: center;
+}
 
 /* ############################################################
 ATTRIBUTES
@@ -370,6 +380,14 @@ section.lines {
 .error-page section.lines {
     background: repeating-linear-gradient(to right, var(--listDividerColor), var(--listDividerColor) 1px, var(--globalBackground) 1px, var(--globalBackground) 15px);
     min-height: 50vh;
+}
+#error-triangle {
+    max-width: max-content;
+    margin-left: auto;
+    margin-bottom: -3rem;
+    margin-right: 15px;
+    font-size: 4em;
+    color: var(--listDividerColor);
 }
 .contact-page section.lines {
     min-height: 10rem;
