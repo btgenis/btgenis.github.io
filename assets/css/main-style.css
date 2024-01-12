@@ -363,7 +363,7 @@ section.lines {
 }
 .contact-page section.lines {
     min-height: 10rem;
-    height: 40vh;
+    height: 35vh;
     margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wLarge);
@@ -373,7 +373,7 @@ section.lines {
     margin-left: 45px;
     margin-top: -6rem;
     max-width: var(--wLarge);
-    min-height: 35vh;
+    min-height: 22vw;
     padding: 1rem 1rem 1rem 3rem;
     display: flex;
     flex-direction: column;
