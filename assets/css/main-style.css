@@ -377,6 +377,9 @@ section.lines {
     -ms-user-select: none;
     user-select: none;
 }
+.index-page section.lines {
+    height: 100vh;
+}
 .error-page section.lines {
     background: repeating-linear-gradient(to right, var(--listDividerColor), var(--listDividerColor) 1px, var(--globalBackground) 1px, var(--globalBackground) 15px);
     min-height: 50vh;
