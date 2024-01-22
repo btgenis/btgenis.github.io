@@ -62,6 +62,9 @@ html {
 body {
     margin: 2rem 1rem 4rem 1rem;
 }
+body#index-page {
+    margin-bottom: 0;
+}
 
 /* ############################################################
 ELEMENTS
@@ -362,7 +365,7 @@ footer {
             gap: 1.5rem;
         }
 
-.contact-page main {
+#contact-page main {
     margin-bottom: 0 !important;
 }
 section.lines {
@@ -377,7 +380,7 @@ section.lines {
     -ms-user-select: none;
     user-select: none;
 }
-.index-page section.lines {
+#index-page section.lines {
     height: 100vh;
 }
 .error-page section.lines {
@@ -392,14 +395,14 @@ section.lines {
     font-size: 4em;
     color: var(--listDividerColor);
 }
-.contact-page section.lines {
+#contact-page section.lines {
     min-height: 10rem;
     height: 35vh;
     margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wMedium);
 }
-.contact-page section.card {
+#contact-page section.card {
     background: var(--grayBoxColor);
     margin-left: 45px;
     margin-top: -6rem;
@@ -411,7 +414,7 @@ section.lines {
     flex-direction: column;
     justify-content: space-between;
 }
-.contact-page section.card hr#black {
+#contact-page section.card hr#black {
     height: 30px;
     background-color: var(--globalBackground);
 }
@@ -440,10 +443,10 @@ MEDIA RULES
     footer nav ul {
         gap: 1rem;
     }
-    .contact-page section.lines {
+    #contact-page section.lines {
         margin-right: unset;
     }
-    .contact-page section.card {
+    #contact-page section.card {
         margin-left: 15px;
         font-size: .9em;
     }
