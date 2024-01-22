@@ -365,7 +365,7 @@ footer {
             gap: 1.5rem;
         }
 
-#contact-page main {
+#contact-page .container main {
     margin-bottom: 0 !important;
 }
 section.lines {
@@ -381,9 +381,9 @@ section.lines {
     user-select: none;
 }
 #index-page section.lines {
-    height: 100vh;
+    height: 100vh !important;
 }
-.error-page section.lines {
+#error-page .container section.lines {
     background: repeating-linear-gradient(to right, var(--listDividerColor), var(--listDividerColor) 1px, var(--globalBackground) 1px, var(--globalBackground) 15px);
     min-height: 50vh;
 }
@@ -395,14 +395,14 @@ section.lines {
     font-size: 4em;
     color: var(--listDividerColor);
 }
-#contact-page section.lines {
+#contact-page .container section.lines {
     min-height: 10rem;
     height: 35vh;
     margin-right: 30px;
     margin-bottom: 0;
     max-width: var(--wMedium);
 }
-#contact-page section.card {
+#contact-page .container section.card {
     background: var(--grayBoxColor);
     margin-left: 45px;
     margin-top: -6rem;
@@ -414,7 +414,7 @@ section.lines {
     flex-direction: column;
     justify-content: space-between;
 }
-#contact-page section.card hr#black {
+#contact-page .container .card hr#black {
     height: 30px;
     background-color: var(--globalBackground);
 }
@@ -443,10 +443,10 @@ MEDIA RULES
     footer nav ul {
         gap: 1rem;
     }
-    #contact-page section.lines {
+    #contact-page .container section.lines {
         margin-right: unset;
     }
-    #contact-page section.card {
+    #contact-page .container section.card {
         margin-left: 15px;
         font-size: .9em;
     }
