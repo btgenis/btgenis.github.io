@@ -167,6 +167,9 @@ a.plain-link:hover * {opacity: .5;}
 .mb-0 {margin-bottom: 0 !important;}
 .ml-0 {margin-left: 0 !important;}
 
+.align-right {margin-left: auto !important;}
+.align-left {margin-right: auto !important;}
+
 .w-s {max-width: var(--wSmall);}
 .w-m {max-width: var(--wMedium);}
 .w-l {max-width: var(--wLarge);}
@@ -387,7 +390,7 @@ section.lines {
     background: repeating-linear-gradient(to right, var(--listDividerColor), var(--listDividerColor) 1px, var(--globalBackground) 1px, var(--globalBackground) 15px);
     min-height: 50vh;
 }
-#error-triangle {
+#error-symbol {
     max-width: max-content;
     margin-left: auto;
     margin-bottom: -3rem;
