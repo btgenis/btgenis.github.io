@@ -62,7 +62,8 @@ html {
 body {
     margin: 2rem 1rem 4rem 1rem;
 }
-body#index-page {
+body#index-page,
+body#film-archive-page {
     margin-bottom: 0;
 }
 
@@ -109,14 +110,13 @@ ul {
 
 .flex {
     display: flex;
+    gap: 1rem;
 }
 .flex.row {
     flex-direction: row;
-    gap: 1rem;
 }
 .flex.column {
     flex-direction: column;
-    gap: 1rem;
 }
 .flex.space-between {
     justify-content: space-between;
@@ -169,6 +169,8 @@ a.plain-link:hover * {opacity: .5;}
 
 .align-right {margin-left: auto !important;}
 .align-left {margin-right: auto !important;}
+
+.w-max-content {max-width: max-content !important;}
 
 .w-s {max-width: var(--wSmall);}
 .w-m {max-width: var(--wMedium);}
@@ -383,7 +385,8 @@ section.lines {
     -ms-user-select: none;
     user-select: none;
 }
-#index-page section.lines {
+#index-page section.lines,
+#film-archive-page section.lines {
     height: 100vh !important;
 }
 #error-page .container section.lines {
