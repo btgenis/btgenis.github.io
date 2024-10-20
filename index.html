@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="B. T. Geniş"/>
+	<meta name="description" content="Personal photography by B. T. Geniş. Nothing particularly special but the human experience.">
+	<meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="B. T. Geniş">
+	<meta property="og:site_name" content="B. T. Geniş">
+	<meta property="og:url" content="https://btgenis.com">
+	<meta property="og:description" content="Personal photography by B. T. Geniş. Nothing particularly special but the human experience.">
+	<title>B. T. Geniş</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="src/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="src/apple-touch-icon.png">
+</head>
+<body>
+    <div id="photos" class="small">
+        <div class="grid">
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_6916</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_6916.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_6845</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_6845.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_6797</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_6797.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_6576</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_6576.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_6517</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_6517.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_5941</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_5941.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_5835</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_5835.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_5826</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_5826.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_5792</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_5792.jpeg"></div></div>
+            <!-- <div class="item-container"><div class="description-wrapper"><div class="description">IMG_5639</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_5639.jpeg"></div></div> -->
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_4936</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_4936.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_4888</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_4888.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_4874</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_4874.jpeg"></div></div>
+            <!-- <div class="item-container"><div class="description-wrapper"><div class="description">IMG_4863</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_4863.jpeg"></div></div> -->
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_4808</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_4808.jpeg"></div></div>
+            <div class="item-container"><div class="description-wrapper"><div class="description">IMG_0676</div></div><div class="img-wrapper"><img loading="lazy" src="img/IMG_0676.jpeg"></div></div>
+        </div>
+    </div>
+    <div class="main">
+        <p>More often  than not, the things we see are neither important nor interesting: but the way we see them — that’s a different story. When we come across a self-publication, what excites us are not the images themselves, but how that person sees the world and chooses to frame it. The way even the most ordinary person experiences the world—and, more importantly, the way they choose to share it—will always be intriguing to me. And as the allure of <i>the way we see it</i> exceeds the picture itself, for some of us, <i>the way we present it</i> is far more fascinating than the gallery itself: This website is, essentially, a zine.</p>
+        <div class="spacer-3x"></div>
+        <div class="large-width align-center">
+            <p>THE ZINE</p>
+            <div class="spacer-1x"></div>
+            <p class="padding-left-2x medium-width">Do you remember the time before the monotonous <i>feeds</i> of social media conquered—nearly—all parts of the web? <i>The internet</i> was something else, wasn't it? For anyone willing to acquire basic knowledge, making websites is still the best way of self-publishing. Because the way we present things is as equally important as the things we present.</p>
+            <div class="spacer-2x"></div>
+            <p>CONTACT</p>
+            <div class="spacer-1x"></div>
+            <p class="padding-left-2x medium-width">You can email me at: <br><br><a href="mailto:btgenis@proton.me">btgenis {at} proton {dot} me</a></p>
+        </div>
+    </div>
+    <div class="spacer-2x"></div>
+    <footer>
+        <p>B. T. Geniş, 2024</p>
+    </footer>
+
+    <script>
+        // Select the photos element and all images
+        const photos = document.getElementById('photos');
+        const images = document.querySelectorAll('.grid img');
+
+        // Function to set the view mode and save to localStorage
+        function setViewMode(mode) {
+            photos.classList.remove('small', 'big'); // Remove any existing classes
+            photos.classList.add(mode); // Add the new class
+            localStorage.setItem('viewMode', mode); // Save the current view mode to localStorage
+        }
+
+        // Function to toggle between small and big classes
+        function toggleClassAndScroll(event) {
+            if (photos.classList.contains('small')) {
+                setViewMode('big');
+                // Scroll to the clicked image
+            } else {
+                setViewMode('small');
+            }
+            event.target.scrollIntoView({ behavior: 'auto', block: 'center' });
+        }
+
+        // Add click event listener to all images
+        images.forEach(image => {
+            image.addEventListener('click', toggleClassAndScroll);
+        });
+
+        // On page load, check the saved view mode and apply it
+        window.addEventListener('load', () => {
+            const savedViewMode = localStorage.getItem('viewMode') || 'small'; // Default to 'small' if nothing is saved
+            setViewMode(savedViewMode);
+        });
+    </script>
+</body>
+</html>
