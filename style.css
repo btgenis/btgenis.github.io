@@ -96,8 +96,8 @@ a {
     display: none;
 }
 .small .item-container .img-wrapper{
-    width: calc(100vh / 10);
-    height: calc(100vh * 1.333 / 10);
+    width: calc(100vw / 20);
+    height: calc(100vw * 1.333 / 20);
     cursor: pointer;
     overflow: hidden;
 }
@@ -145,6 +145,12 @@ footer {
     text-align: right;
 }
 
+@media only screen and (max-width: 801px) {
+    .small .item-container .img-wrapper{
+        width: calc(100vw / 12);
+        height: calc(100vw * 1.333 / 12);
+    }
+}
 @media only screen and (max-width: 501px) {
     body {
         padding: .8rem;
@@ -168,7 +174,10 @@ footer {
     .small .grid {
         justify-content: center;
     }
-    
+    .small .item-container .img-wrapper{
+        width: calc(100vw / 8);
+        height: calc(100vw * 1.333 / 8);
+    }
 }
 @media (orientation: portrait) {
     #photos {
