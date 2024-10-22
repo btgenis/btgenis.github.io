@@ -157,13 +157,13 @@ footer {
         width: calc(100vw / 8);
         height: calc(100vw * 1.333 / 8);
     }
-    #photos.big {
-        margin-top: 100px;
-    }
 }
 @media only screen and (max-width: 501px) {
     body {
         padding: .8rem;
+    }
+    #photos.big {
+        margin-top: 100px;
     }
     .big .item-container {
         flex-direction: column-reverse;
