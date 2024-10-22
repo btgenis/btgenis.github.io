@@ -10,7 +10,7 @@
 }
 @media (prefers-color-scheme: dark){
     :root{
-        --globalBackgroundColor: rgb(15, 15, 15);
+        --globalBackgroundColor: rgb(0, 0, 0);
         --globalFontColor: rgb(240, 240, 240);
         --globalFadedColor: rgb(60, 60, 60);
     }
@@ -78,6 +78,9 @@ a {
 #photos {
     margin: 50px 0 30vh 0;
 }
+#photos.big {
+    margin-top: 0;
+}
 
 .main {
     display: flex;
@@ -121,6 +124,7 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.2rem;
+    padding: 3vh 0;
 }
 .big .item-container .img-wrapper {
     height: 90vh;
