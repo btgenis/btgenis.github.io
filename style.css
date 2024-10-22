@@ -56,7 +56,10 @@ body {
 .spacer-2x {height: 3rem;}
 .spacer-3x {height: 6.5rem;}
 
-img {cursor: pointer;}
+img {
+    cursor: pointer;
+    display: block;
+}
 
 a {
     text-decoration: none;
@@ -134,7 +137,6 @@ a {
     align-items: flex-start;
 }
 .big .item-container .img-wrapper img {
-    display: block;
     height: 100%;
     width: auto;
     max-width: 100%;
