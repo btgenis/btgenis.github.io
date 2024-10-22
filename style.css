@@ -150,8 +150,8 @@ footer {
 
 @media only screen and (max-width: 801px) {
     .small .item-container .img-wrapper{
-        width: calc(100vw / 12);
-        height: calc(100vw * 1.333 / 12);
+        width: calc(100vw / 8);
+        height: calc(100vw * 1.333 / 8);
     }
     #photos.big {
         margin-top: 100px;
@@ -181,8 +181,8 @@ footer {
         justify-content: center;
     }
     .small .item-container .img-wrapper{
-        width: calc(100vw / 8);
-        height: calc(100vw * 1.333 / 8);
+        width: calc(100vw / 5);
+        height: calc(100vw * 1.333 / 5);
     }
 }
 @media (orientation: portrait) {
