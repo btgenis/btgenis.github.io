@@ -152,10 +152,6 @@ a {
     max-width: 15rem;
 }
 
-footer {
-    max-width: 18rem;
-    margin: 0 auto;
-}
 
 @media only screen and (max-width: 801px) {
     .small .item-container .img-wrapper{
