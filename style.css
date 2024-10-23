@@ -73,7 +73,7 @@ a {
 .highlight {background-color: var(--globalGrayHighlight); padding: .2rem .5rem;}
 
 .hero {
-    height: 90vmin;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +81,7 @@ a {
 }
 
 #photos {
-    margin: 3rem 0 30vmin 0;
+    margin: 3rem 0 30vh 0;
 }
 #photos.big {
     margin-top: 0;
@@ -121,7 +121,7 @@ a {
 .big .grid {
     display: flex;
     flex-direction: column;
-    gap: 50vmin;
+    gap: 50vh;
 }
 .big .item-container {
     display: flex;
@@ -129,10 +129,10 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.2rem;
-    padding: 3vmin 0;
+    padding: 3vh 0;
 }
 .big .item-container .img-wrapper {
-    height: 90vmin;
+    height: 90vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -195,6 +195,6 @@ footer {
 }
 @media (orientation: portrait) {
     #photos {
-        margin-bottom: 15vmin;
+        margin-bottom: 15vh;
     }
 }
