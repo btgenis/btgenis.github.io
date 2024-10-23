@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
     padding: 1rem;
     font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
-    font-weight: 300;
+    font-weight: 350;
     color: var(--globalFontColor);
     background-color: var(--globalBackgroundColor);
     text-rendering: optimizeLegibility;
@@ -55,6 +55,8 @@ body {
 .spacer-1x {height: 1.5rem;}
 .spacer-2x {height: 3rem;}
 .spacer-3x {height: 6.5rem;}
+
+h1,h2,h3,h4,h5,h6 {all:unset;}
 
 img {
     cursor: pointer;
