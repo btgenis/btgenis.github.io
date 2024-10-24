@@ -152,6 +152,12 @@ a {
     max-width: 15rem;
 }
 
+@media only screen and (max-width: 1000px) {
+    .small .item-container .img-wrapper{
+        width: calc((100vw - 2rem - 1.8rem - 25px) / 10);
+        height: calc((100vw - 2rem - 1.8rem - 25px) * 1.333 / 10);
+    }
+}
 @media (orientation: portrait) or (max-width:501px){
     #photos {
         margin-bottom: 15vh;
