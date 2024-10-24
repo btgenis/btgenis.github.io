@@ -156,8 +156,8 @@ a {
 
 @media only screen and (max-width: 1000px) {
     .small .item-container .img-wrapper{
-        width: calc((99vw - 2rem - 1.8rem - 25px) / 10);
-        height: calc((99vw - 2rem - 1.8rem - 25px) * 1.333 / 10);
+        width: calc((99vw - 2rem - 1.8rem) / 10);
+        height: calc((99vw - 2rem - 1.8rem) * 1.333 / 10);
     }
 }
 @media (orientation: portrait) or (max-width:501px){
