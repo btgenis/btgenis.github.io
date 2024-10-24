@@ -107,8 +107,8 @@ a {
     display: none;
 }
 .small .item-container .img-wrapper{
-    width: calc(100vw / 20);
-    height: calc(100vw * 1.333 / 20);
+    width: calc((98vw - 2rem - 2.8rem) / 15);
+    height: calc((98vw - 2rem - 2.8rem) / 15*1.333);
     cursor: pointer;
     overflow: hidden;
 }
@@ -152,25 +152,25 @@ a {
     max-width: 15rem;
 }
 
-
-@media only screen and (max-width: 801px) {
-    .small .item-container .img-wrapper{
-        width: calc(100vw / 8);
-        height: calc(100vw * 1.333 / 8);
+@media (orientation: portrait) or (max-width:501px){
+    #photos {
+        margin-bottom: 15vh;
     }
-}
-@media only screen and (max-width: 501px) {
-    body {
-        padding: .8rem;
+    .small .item-container .img-wrapper{
+        width: calc((98vw - 2rem - 0.8rem) / 5);
+        height: calc((98vw - 2rem - 0.8rem) / 5*1.333);
     }
     #photos.big {
-        margin-top: 6rem;
+        margin-top: 15vh !important;
     }
     .big .item-container {
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: stretch;
         height: auto;
+    }
+    .big .item-container .description{
+        position: unset;
     }
     .big .item-container .img-wrapper {
         height: auto;
@@ -181,17 +181,5 @@ a {
         width: 100%;
         height: auto;
         object-position: bottom left;
-    }
-    .small .grid {
-        justify-content: center;
-    }
-    .small .item-container .img-wrapper{
-        width: calc(100vw / 5);
-        height: calc(100vw * 1.333 / 5);
-    }
-}
-@media (orientation: portrait) {
-    #photos {
-        margin-bottom: 15vh;
     }
 }
