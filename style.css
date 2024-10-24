@@ -107,8 +107,8 @@ a {
     display: none;
 }
 .small .item-container .img-wrapper{
-    width: calc((98vw - 2rem - 2.8rem) / 15);
-    height: calc((98vw - 2rem - 2.8rem) / 15*1.333);
+    width: calc((100vw - 2rem - 2.8rem - 25px) / 15);
+    height: calc((100vw - 2rem - 2.8rem - 25px) * 1.333 / 15);
     cursor: pointer;
     overflow: hidden;
 }
@@ -157,8 +157,8 @@ a {
         margin-bottom: 15vh;
     }
     .small .item-container .img-wrapper{
-        width: calc((98vw - 2rem - 0.8rem) / 5);
-        height: calc((98vw - 2rem - 0.8rem) / 5*1.333);
+        width: calc((100vw - 2rem - 0.8rem - 25px) / 5);
+        height: calc((100vw - 2rem - 0.8rem - 25px) * 1.333 / 5);
     }
     #photos.big {
         margin-top: 15vh !important;
