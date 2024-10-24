@@ -99,7 +99,7 @@ a {
     align-items: stretch;
     justify-content: flex-start;
     gap: 0.2rem;
-    width: 99vw;
+    width: calc(100vw - 2rem);
     overflow-x: hidden;
 }
 .small .grid img:hover {
