@@ -6,13 +6,13 @@
 /* Light/Dark mode settings */
 :root {
     --globalBackgroundColor: rgb(255, 255, 255);
-    --globalFontColor: rgb(0, 0, 0);
+    --globalFontColor: rgb(15, 15, 15);
     --globalFadedColor: rgb(180, 180, 180);
 }
 @media (prefers-color-scheme: dark){
     :root{
         --globalBackgroundColor: rgb(18, 18, 18);
-        --globalFontColor: rgb(240, 240, 240);
+        --globalFontColor: rgb(235, 235, 235);
         --globalFadedColor: rgb(60, 60, 60);
     }
 }
