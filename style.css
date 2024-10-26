@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+/* Light/Dark mode settings */
 :root {
     --globalBackgroundColor: rgb(255, 255, 255);
     --globalFontColor: rgb(0, 0, 0);
@@ -25,20 +26,7 @@
     src: url(src/InterVariable.ttf);
 }
 
-body {
-    overflow-x: hidden;
-    padding: 0 1rem 1rem 1rem;
-    font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
-    font-weight: 350;
-    color: var(--globalFontColor);
-    background-color: var(--globalBackgroundColor);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    font-size: .9rem;
-    line-height: 1.2;
-}
+/* Elements */
 
 .padding-left-1x {padding-left: 5vw;}
 .padding-left-2x {padding-left: 10vw;}
@@ -70,8 +58,6 @@ a {
     color: var(--globalFontColor);
 } a:hover {border-bottom: none;}
 
-.highlight {background-color: var(--globalGrayHighlight); padding: .2rem .5rem;}
-
 .hero {
     height: 90vh;
     display: flex;
@@ -80,6 +66,24 @@ a {
     align-items: center;
 }
 
+/* Page */
+
+body {
+    overflow-x: hidden;
+    padding: 0 1rem 1rem 1rem;
+    font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
+    font-weight: 350;
+    color: var(--globalFontColor);
+    background-color: var(--globalBackgroundColor);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
+/* #photos */
 #photos {
     margin: 3rem 0 30vh 0;
 }
@@ -87,6 +91,7 @@ a {
     margin-top: 0;
 }
 
+/* #photos small view mode */
 .small .grid {
     display: flex;
     flex-wrap: wrap;
@@ -114,6 +119,7 @@ a {
     object-fit: cover;
 }
 
+/* #photos big view mode */
 .big .grid {
     display: flex;
     flex-direction: column;
@@ -148,10 +154,12 @@ a {
     max-width: 15rem;
 }
 
+/* Below #photos */
 .imprint-text {
     max-width: 16rem;
 }
 
+/* Media queries */
 @media only screen and (max-width: 1000px) {
     .small .item-container .img-wrapper{
         width: calc((99vw - 2rem - 1.8rem) / 10);
