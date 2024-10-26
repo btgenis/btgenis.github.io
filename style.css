@@ -32,6 +32,7 @@
 .padding-left-2x {padding-left: 10vw;}
 .padding-left-3x {padding-left: 15vw;}
 
+.max-width {max-width: 100rem;}
 .large-width {max-width: 75rem;}
 .medium-width {max-width: 45rem;}
 .small-width {max-width: 30rem;}
