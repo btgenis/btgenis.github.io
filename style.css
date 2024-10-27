@@ -199,8 +199,8 @@ body {
         gap: 0.9vw;
     }
     .small .item-container .img-wrapper{
-        width: calc((99vw - 2rem - 3.6vw) / 5);
-        height: calc((99vw - 2rem - 3.6vw) * 1.333 / 5);
+        width: calc((99vw - 2rem - 2.7vw) / 4);
+        height: calc((99vw - 2rem - 2.7vw) * 1.333 / 4);
     }
     #photos.big {
         margin-top: 15vh !important;
