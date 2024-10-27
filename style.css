@@ -145,7 +145,7 @@ body {
 .big .grid {
     display: flex;
     flex-direction: column;
-    gap: 30rem;
+    gap: 50vh;
 }
 .big .item-container {
     display: flex;
