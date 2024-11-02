@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Wait a frame to ensure opacity is applied
                     requestAnimationFrame(() => {
                         // Now unblur both images simultaneously
-                        highResImage.style.filter = 'blur(0)';
-                        image.style.filter = 'blur(0)';
+                        highResImage.style.opacity = '1';
+                        image.style.opacity = '1';
                     });
                 });
 
