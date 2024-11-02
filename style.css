@@ -169,9 +169,9 @@ body {
     object-fit: contain;
     object-position: top right;
 }
-/* .big .item-container .img-wrapper img:not(.loaded) {
+.big .item-container .img-wrapper img:not(.loaded) {
     filter: blur(20px);
-} */
+}
 .big .item-container .description {
     position: sticky;
     top: 1rem;

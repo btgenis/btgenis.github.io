@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
             .thumbnail {
                 position: relative;
                 z-index: 1;
-                opacity: 0;
-                transition: opacity 0.5s ease-out;
+                filter: blur(20px);
+                transition: all 0.5s ease-out;
             }
             .high-res {
                 position: absolute;
@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 left: 0;
                 opacity: 0;
                 z-index: 2;
-                opacity: 1;
-                transition: opacity 0.5s ease-out;
+                filter: blur(20px);
+                transition: all 0.5s ease-out;
             }
         `;
         document.head.appendChild(style);
@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Wait a frame to ensure opacity is applied
                     requestAnimationFrame(() => {
                         // Now unblur both images simultaneously
-                        highResImage.style.opacity = '1';
-                        image.style.opacity = '1';
+                        highResImage.style.filter = 'blur(0)';
+                        image.style.filter = 'blur(0)';
                     });
                 });
 
