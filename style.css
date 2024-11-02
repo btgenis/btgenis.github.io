@@ -161,6 +161,7 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+    overflow: hidden;
 }
 .big .item-container .img-wrapper img {
     height: 100%;
