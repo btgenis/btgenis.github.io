@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // On page load, check the saved view mode and apply it
     window.addEventListener('load', () => {
-        const savedViewMode = localStorage.getItem('viewMode') || 'small';
+        const savedViewMode = localStorage.getItem('viewMode') || 'big';
         setViewMode(savedViewMode);
         if (savedViewMode === 'big') {
             images.forEach(image => {
