@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 position: relative;
                 z-index: 1;
                 filter: blur(20px);
-                -webkit-transition: 0.2s -webkit-filter linear;
-                -moz-transition: 0.2s -moz-filter linear;
-                -moz-transition: 0.2s filter linear;
-                -ms-transition: 0.2s -ms-filter linear;
-                -o-transition: 0.2s -o-filter linear;
-                transition: 0.2s filter linear, 0.2s -webkit-filter linear;
+                -webkit-transition: 0.5s -webkit-filter linear;
+                -moz-transition: 0.5s -moz-filter linear;
+                -moz-transition: 0.5s filter linear;
+                -ms-transition: 0.5s -ms-filter linear;
+                -o-transition: 0.5s -o-filter linear;
+                transition: 0.5s filter linear, 0.5s -webkit-filter linear;
             }
             .high-res {
                 position: absolute;
@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 opacity: 0;
                 z-index: 2;
                 filter: blur(20px);
-                -webkit-transition: 0.2s -webkit-filter linear;
-                -moz-transition: 0.2s -moz-filter linear;
-                -moz-transition: 0.2s filter linear;
-                -ms-transition: 0.2s -ms-filter linear;
-                -o-transition: 0.2s -o-filter linear;
-                transition: 0.2s filter linear, 0.2s -webkit-filter linear;
+                -webkit-transition: 0.5s -webkit-filter linear;
+                -moz-transition: 0.5s -moz-filter linear;
+                -moz-transition: 0.5s filter linear;
+                -ms-transition: 0.5s -ms-filter linear;
+                -o-transition: 0.5s -o-filter linear;
+                transition: 0.5s filter linear, 0.5s -webkit-filter linear;
             }
         `;
         document.head.appendChild(style);
