@@ -7,15 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const style = document.createElement('style');
         style.id = 'blur-animation';
         style.textContent = `
-            .img-wrapper {
-                position: relative;
-                overflow: hidden;
-            }
-            .img-wrapper img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
             .thumbnail {
                 position: relative;
                 z-index: 1;
