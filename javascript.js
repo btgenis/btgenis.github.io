@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 position: relative;
                 z-index: 1;
                 filter: blur(20px);
-                transform: scale(1.1);
-                transition: opacity 0.5s ease-out;
+                transition: all 0.5s ease-out;
             }
             .high-res {
                 position: absolute;
@@ -29,17 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 left: 0;
                 opacity: 0;
                 z-index: 2;
-                transition: opacity 0.5s ease-out, filter 0.5s ease-out, transform 0.5s ease-out;
                 filter: blur(20px);
-                transform: scale(1.1);
-            }
-            .high-res.reveal {
-                opacity: 1;
-                filter: blur(0);
-                transform: scale(1);
-            }
-            .thumbnail.fade-out {
-                opacity: 0;
+                transition: all 0.5s ease-out;
             }
         `;
         document.head.appendChild(style);
@@ -64,16 +54,26 @@ document.addEventListener("DOMContentLoaded", function() {
             highResImage.onload = function() {
                 wrapper.appendChild(highResImage);
                 
-                // Trigger the transition
+                // Force browser reflow
+                highResImage.offsetHeight;
+                
+                // Start with both images blurred
                 requestAnimationFrame(() => {
-                    highResImage.classList.add('reveal');
-                    image.classList.add('fade-out');
+                    // First make the high-res image visible but still blurred
+                    highResImage.style.opacity = '1';
+                    
+                    // Wait a frame to ensure opacity is applied
+                    requestAnimationFrame(() => {
+                        // Now unblur both images simultaneously
+                        highResImage.style.filter = 'blur(0)';
+                        image.style.filter = 'blur(0)';
+                    });
                 });
 
                 // Mark as loaded
                 image.classList.add("loaded");
                 
-                // After transition, update the original image source
+                // Clean up after transition
                 setTimeout(() => {
                     image.src = largeImageSrc;
                     image.classList.remove('thumbnail', 'fade-out');
