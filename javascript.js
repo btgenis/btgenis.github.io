@@ -105,9 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const newMode = photosDiv.classList.contains('small') ? 'big' : 'small';
         setViewMode(newMode);
         event.target.scrollIntoView({ behavior: 'auto', block: 'center' });
-        if (newMode === 'big') {
-            loadLargeImage(event.target);
-        }
+        loadLargeImage(event.target);  // Load large image when toggling
     }
 
     // Set up Intersection Observer
@@ -133,13 +131,11 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('load', () => {
         const savedViewMode = localStorage.getItem('viewMode') || 'small';
         setViewMode(savedViewMode);
-        if (savedViewMode === 'big') {
-            images.forEach(image => {
-                const rect = image.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    loadLargeImage(image);
-                }
-            });
-        }
+        images.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0 && photosDiv.classList.contains("big")) {
+                loadLargeImage(image);
+            }
+        });
     });
 });
