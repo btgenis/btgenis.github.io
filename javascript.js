@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             .thumbnail {
                 position: relative;
+                z-index: 1;
                 filter: blur(20px);
                 -webkit-transition: 0.5s -webkit-filter linear;
                 -moz-transition: 0.5s -moz-filter linear;
