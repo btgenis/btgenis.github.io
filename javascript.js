@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .img-wrapper img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
             .thumbnail {
                 position: relative;
