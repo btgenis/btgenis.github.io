@@ -238,15 +238,10 @@ body {
 }
 
 .big .img-wrapper > img.loaded {
-    filter: blur(0);
+    opacity: 1;
 }
 
 .big .img-wrapper > img {
-    filter: blur(20px);
-    -webkit-transition: 0.5s -webkit-filter linear;
-    -moz-transition: 0.5s -moz-filter linear;
-    -moz-transition: 0.5s filter linear;
-    -ms-transition: 0.5s -ms-filter linear;
-    -o-transition: 0.5s -o-filter linear;
-    transition: 0.5s filter linear, 0.5s -webkit-filter linear;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
