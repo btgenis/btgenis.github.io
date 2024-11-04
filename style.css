@@ -242,9 +242,9 @@ body {
 
 .big .img-wrapper > img.loaded {
     opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .big .img-wrapper > img {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
