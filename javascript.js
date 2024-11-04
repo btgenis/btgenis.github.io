@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     image.classList.remove('thumbnail');
                     wrapper.removeChild(highResImage);
-                }, 1000);
+                }, 3000);
 
                 // Mark as loaded
                 image.classList.add("loaded");
