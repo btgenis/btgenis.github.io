@@ -21,13 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function loadLargeImage(image) {
         const largeImageSrc = image.getAttribute("data-large");
         if (largeImageSrc && !image.classList.contains("loaded")) {
-            const img = new Image(); // Create a new Image object
-            img.src = largeImageSrc; // Set the source to the large image
+            image.src = largeImageSrc;
     
-            // Add an event listener for the load event
-            img.onload = () => {
-                image.src = largeImageSrc; // Set the image source
-                image.classList.add("loaded"); // Add the loaded class
+            image.onload = function() { // add the class "loaded" only after it finishes loading
+                image.classList.add("loaded");
             };
         }
     }
