@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".grid img");
     const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
 
+    // Smooth loading small images
     imagesSmallDiv.forEach(div => {
         const img = div.querySelector("img");
 
@@ -22,8 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const largeImageSrc = image.getAttribute("data-large");
         if (largeImageSrc && !image.classList.contains("loaded")) {
             image.src = largeImageSrc;
-    
-            image.onload = function() { // add the class "loaded" only after it finishes loading
+
+            // Add the class "loaded" only after it finishes loading
+            image.onload = function() {
                 image.classList.add("loaded");
             };
         }
