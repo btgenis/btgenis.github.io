@@ -249,7 +249,7 @@ body {
 .big .img-wrapper > img {
     opacity: 0;
 }
-.big .img-wrapper:has(:not(.loaded))::before {
+.big .img-wrapper:has(.initiated-loading)::before {
     content: '';
     position: absolute;
     inset: 0;
