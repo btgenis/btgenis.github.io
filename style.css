@@ -230,11 +230,20 @@ body {
     }
 }
 
-.img-wrapper.completed-loading > img {
+.small .img-wrapper.completed-loading-small > img {
     opacity: 1;
 }
 
-.img-wrapper > img {
+.small .img-wrapper > img {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.big .img-wrapper > img.loaded {
+    opacity: 1;
+}
+
+.big .img-wrapper > img {
     opacity: 0;
     transition: opacity .5s ease-in-out;
 }

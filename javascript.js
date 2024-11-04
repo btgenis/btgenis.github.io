@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     const photosDiv = document.getElementById("photos");
     const images = document.querySelectorAll(".grid img");
-    const imagesDiv = document.querySelectorAll(".img-wrapper");
+    const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
 
-    imagesDiv.forEach(div => {
+    imagesSmallDiv.forEach(div => {
         const img = div.querySelector("img")
 
         function showLoadedImage() {
-            div.classList.add("completed-loading")
+            div.classList.add("completed-loading-small");
         }
 
         if (img.complete) {
