@@ -80,15 +80,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
                 });
 
-                // Mark as loaded
-                image.classList.add("loaded");
-                
                 // Clean up after transition
                 setTimeout(() => {
                     image.src = largeImageSrc;
                     image.classList.remove('thumbnail');
                     wrapper.removeChild(highResImage);
                 }, 500);
+
+                // Mark as loaded
+                image.classList.add("loaded");
             };
         }
     }
