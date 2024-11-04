@@ -237,7 +237,7 @@ body {
     transition: opacity .5s ease-in-out;
 }
 
-.big .img-wrapper > img.loaded {
+.img-wrapper > img.loaded {
     filter: blur(0);
 }
 
