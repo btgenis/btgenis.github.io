@@ -1,95 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
     const photosDiv = document.getElementById("photos");
     const images = document.querySelectorAll(".grid img");
+    const imagesDiv = document.querySelectorAll(".img-wrapper");
 
-    // Add necessary styles for the blur transition
-    if (!document.querySelector('#blur-animation')) {
-        const style = document.createElement('style');
-        style.id = 'blur-animation';
-        style.textContent = `
-            .img-wrapper {
-                position: relative;
-                overflow: hidden;
-            }
-            .img-wrapper img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-            .thumbnail {
-                position: relative;
-                z-index: 1;
-                filter: blur(20px);
-                -webkit-transition: 0.5s -webkit-filter linear;
-                -moz-transition: 0.5s -moz-filter linear;
-                -moz-transition: 0.5s filter linear;
-                -ms-transition: 0.5s -ms-filter linear;
-                -o-transition: 0.5s -o-filter linear;
-                transition: 0.5s filter linear, 0.5s -webkit-filter linear;
-            }
-            .high-res {
-                position: absolute;
-                top: 0;
-                right: 0;
-                opacity: 0;
-                z-index: 2;
-                filter: blur(20px);
-                -webkit-transition: 0.5s -webkit-filter linear;
-                -moz-transition: 0.5s -moz-filter linear;
-                -moz-transition: 0.5s filter linear;
-                -ms-transition: 0.5s -ms-filter linear;
-                -o-transition: 0.5s -o-filter linear;
-                transition: 0.5s filter linear, 0.5s -webkit-filter linear;
-            }
-        `;
-        document.head.appendChild(style);
-    }
+    imagesDiv.forEach(div => {
+        const img = div.querySelector("img")
 
-    // Function to load large image when clicked
+        function showLoadedImage() {
+            div.classList.add("completed-loading")
+        }
+
+        if (img.complete) {
+            showLoadedImage();
+        } else {
+            img.addEventListener("load", showLoadedImage);
+        }
+    });
+
+    // Function to load large image
     function loadLargeImage(image) {
         const largeImageSrc = image.getAttribute("data-large");
         if (largeImageSrc && !image.classList.contains("loaded")) {
-            const wrapper = image.closest('.img-wrapper');
-            
-            // Set up the thumbnail
-            image.classList.add('thumbnail');
-            
-            // Create and load the high-res image
-            const highResImage = new Image();
-            highResImage.className = 'high-res';
-            highResImage.src = largeImageSrc;
-            highResImage.alt = image.alt;
-            
-            // Only proceed with transition once the high-res image is loaded
-            highResImage.onload = function() {
-                wrapper.appendChild(highResImage);
-                
-                // Force browser reflow
-                highResImage.offsetHeight;
-                
-                // Start with both images blurred
-                requestAnimationFrame(() => {
-                    // First make the high-res image visible but still blurred
-                    highResImage.style.opacity = '1';
-                    
-                    // Wait a frame to ensure opacity is applied
-                    requestAnimationFrame(() => {
-                        // Now unblur both images simultaneously
-                        highResImage.style.filter = 'blur(0)';
-                        image.style.filter = 'blur(0)';
-                    });
-                });
-
-                image.src = largeImageSrc;
-                // Clean up after transition
-                setTimeout(() => {
-                    image.classList.remove('thumbnail');
-                    wrapper.removeChild(highResImage);
-                }, 3000);
-
-                // Mark as loaded
-                image.classList.add("loaded");
-            };
+            image.src = largeImageSrc;
+            image.classList.add("loaded");
         }
     }
 
