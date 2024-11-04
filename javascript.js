@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
                 });
 
+                image.src = largeImageSrc;
                 // Clean up after transition
                 setTimeout(() => {
-                    image.src = largeImageSrc;
                     image.classList.remove('thumbnail');
                     wrapper.removeChild(highResImage);
                 }, 500);
