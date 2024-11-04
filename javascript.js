@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const largeImageSrc = image.getAttribute("data-large");
         if (largeImageSrc && !image.classList.contains("loaded")) {
             image.src = largeImageSrc;
+            image.classList.add("initiated-loading");
 
             // Add the class "loaded" only after it finishes loading
             image.onload = function() {
+                image.classList.remove("initiated-loading");
                 image.classList.add("loaded");
             };
         }

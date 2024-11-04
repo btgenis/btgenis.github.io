@@ -231,7 +231,7 @@ body {
 
 /* Smooth Loading Options */
 
-.small .img-wrapper.completed-loading-small > img {
+.small .img-wrapper.completed-loading-small > img:not(.initiated-loading) {
     opacity: 1;
 }
 
