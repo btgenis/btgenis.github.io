@@ -170,9 +170,7 @@ body {
     object-fit: contain;
     object-position: top right;
 }
-.big .item-container .img-wrapper img:not(.loaded) {
-    filter: saturate(0.6) brightness(3);
-}
+
 .big .item-container .description {
     position: sticky;
     top: 1rem;
