@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
 
     imagesSmallDiv.forEach(div => {
-        const img = div.querySelector("img")
+        const img = div.querySelector("img");
 
         function showLoadedImage() {
             div.classList.add("completed-loading-small");
@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function loadLargeImage(image) {
         const largeImageSrc = image.getAttribute("data-large");
         if (largeImageSrc && !image.classList.contains("loaded")) {
-            image.src = largeImageSrc;
-            image.classList.add("loaded");
+            const img = new Image(); // Create a new Image object
+            img.src = largeImageSrc; // Set the source to the large image
+    
+            // Add an event listener for the load event
+            img.onload = () => {
+                image.src = largeImageSrc; // Set the image source
+                image.classList.add("loaded"); // Add the loaded class
+            };
         }
     }
 
