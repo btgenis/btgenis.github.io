@@ -77,7 +77,7 @@ a {
 }
 
 
-.logo {
+/* .logo {
     border: none !important;
     display: inline-block;
     transition: .3s ease-in-out;
@@ -85,7 +85,7 @@ a {
     right: 1.5rem;
     bottom: 1rem;
     opacity: .2;
-} .logo:hover {opacity: 1;}
+} .logo:hover {opacity: 1;} */
 
 
 /* Page */
