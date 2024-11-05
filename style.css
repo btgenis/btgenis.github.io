@@ -238,12 +238,12 @@ body {
 
 .small .img-wrapper > img {
     opacity: 0;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s linear;
 }
 
 .big .img-wrapper > img.loaded {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s linear;
 }
 
 .big .img-wrapper > img {
@@ -258,13 +258,13 @@ body {
     opacity: 0.2;
 }
 @keyframes pulse {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
+    0%,20% {
         opacity: 0;
     }
-    100% {
+    45%,55% {
         opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
     }
   }
