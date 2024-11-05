@@ -134,6 +134,7 @@ body {
     height: calc((99vw - 2rem - 3.5vw) * 1.333 / 15);
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 }
 .small .item-container .img-wrapper img {
     width: 100%;
@@ -250,6 +251,14 @@ body {
     opacity: 0;
 }
 .big .img-wrapper:has(.initiated-loading)::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    animation: pulse 2s infinite;
+    background-color: rgb(128, 128, 128);
+    opacity: 0.2;
+}
+.small .img-wrapper.completed-loading-small:has(.initiated-loading)::before {
     content: '';
     position: absolute;
     inset: 0;
