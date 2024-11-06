@@ -268,12 +268,12 @@ body {
 }
 @keyframes pulse {
     0%,10% {
-        opacity: 0;
-    }
-    50%,60% {
         opacity: 0.2;
     }
-    100% {
+    50%,60% {
         opacity: 0;
+    }
+    100% {
+        opacity: 0.2;
     }
   }
