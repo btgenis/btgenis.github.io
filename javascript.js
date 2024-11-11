@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // On page load, check the saved view mode and apply it
     window.addEventListener('load', () => {
-        const savedViewMode = localStorage.getItem('viewMode') || 'small';
+        const savedViewMode = localStorage.getItem('viewMode') || 'big';
         setViewMode(savedViewMode);
         images.forEach(image => {
             const rect = image.getBoundingClientRect();
@@ -77,5 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 loadLargeImage(image);
             }
         });
+        document.body.classList.remove('hidden');
     });
 });

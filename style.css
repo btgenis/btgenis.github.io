@@ -6,16 +6,38 @@
 /* Light/Dark mode settings */
 :root {
     --globalBackgroundColor: rgb(255, 255, 255);
+    --globalBackgroundFade: rgb(230, 230, 230);
     --globalFontColor: rgb(15, 15, 15);
     --globalFadedColor: rgb(180, 180, 180);
 }
 @media (prefers-color-scheme: dark){
     :root{
         --globalBackgroundColor: rgb(18, 18, 18);
+        --globalBackgroundFade: rgb(30, 30, 30);
         --globalFontColor: rgb(235, 235, 235);
         --globalFadedColor: rgb(60, 60, 60);
     }
 }
+
+.hidden > * {
+    visibility: hidden;
+}
+.hidden {
+    animation: pageLoadingAnimation 2s infinite;
+    background-color: var(--globalBackgroundColor);
+}
+
+@keyframes pageLoadingAnimation {
+    0%,10% {
+        background-color: var(--globalBackgroundColor);
+    }
+    50%,60% {
+        background-color: var(--globalBackgroundFade);
+    }
+    100% {
+        background-color: var(--globalBackgroundColor);
+    }
+  }
 
 @font-face {
     font-family: 'Roboto';
