@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".grid img");
     const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
 
+    // check the saved view mode and apply it
+    const savedViewMode = localStorage.getItem('viewMode') || 'big';
+    setViewMode(savedViewMode);
+    images.forEach(image => {
+        const rect = image.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0 && photosDiv.classList.contains("big")) {
+            loadLargeImage(image);
+        }
+    });
+    document.body.classList.remove('hidden'); // Reveal the body
+
     // Smooth loading small images
     imagesSmallDiv.forEach(div => {
         const img = div.querySelector("img");
@@ -65,18 +76,5 @@ document.addEventListener("DOMContentLoaded", function() {
     images.forEach(image => {
         image.addEventListener('click', toggleClassAndScroll);
         observer.observe(image);
-    });
-
-    // On page load, check the saved view mode and apply it
-    window.addEventListener('load', () => {
-        const savedViewMode = localStorage.getItem('viewMode') || 'big';
-        setViewMode(savedViewMode);
-        images.forEach(image => {
-            const rect = image.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0 && photosDiv.classList.contains("big")) {
-                loadLargeImage(image);
-            }
-        });
-        document.body.classList.remove('hidden');
     });
 });
