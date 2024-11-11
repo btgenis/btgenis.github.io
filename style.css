@@ -19,26 +19,6 @@
     }
 }
 
-.hidden > * {
-    visibility: hidden;
-}
-.hidden {
-    animation: pageLoadingAnimation 2s infinite;
-    background-color: var(--globalBackgroundColor);
-}
-
-@keyframes pageLoadingAnimation {
-    0%,10% {
-        background-color: var(--globalBackgroundColor);
-    }
-    50%,60% {
-        background-color: var(--globalBackgroundFade);
-    }
-    100% {
-        background-color: var(--globalBackgroundColor);
-    }
-  }
-
 @font-face {
     font-family: 'Roboto';
     src: url(src/RobotoCondensed-VariableFont_wght.ttf);

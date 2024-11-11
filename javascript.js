@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
             loadLargeImage(image);
         }
     });
-    document.body.classList.remove('hidden'); // Reveal the body
 
     // Smooth loading small images
     imagesSmallDiv.forEach(div => {
