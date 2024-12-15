@@ -206,7 +206,7 @@ body {
         height: calc((99vw - 2rem - 2.7vw) * 1.333 / 4);
     }
     #photos.big {
-        margin-top: 15vh !important;
+        margin-top: 7vh !important;
     }
     .big .item-container {
         flex-direction: column-reverse;
