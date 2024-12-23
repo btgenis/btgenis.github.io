@@ -115,6 +115,24 @@ body {
     margin-top: 0;
 }
 
+.tip {
+    position: absolute;
+    bottom: 5vh;
+    animation: tipAnimation 10s linear;
+    animation-iteration-count: 1;
+    visibility: hidden;
+}
+.small .tip {
+    display: none;
+}
+@keyframes tipAnimation {
+    0% {opacity: 0; visibility: unset;}
+    10% {opacity: 0;}
+    30% {opacity: 1;}
+    80% {opacity: 1}
+    100% {opacity: 0; visibility: hidden;}
+}
+
 /* #photos small view mode */
 
 .small .grid {
