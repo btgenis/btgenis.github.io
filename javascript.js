@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Displaying the tip
+    const tip = document.getElementById('tip');
+    tip.addEventListener('animationend', () => {
+        tip.classList.add('tipAnimationCompleted');
+    });
+
     // Smooth loading small images
     imagesSmallDiv.forEach(div => {
         const img = div.querySelector("img");

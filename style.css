@@ -115,15 +115,13 @@ body {
     margin-top: 0;
 }
 
-.tip {
-    position: absolute;
+#tip:not(.tipAnimationCompleted) {
+    position: fixed;
     bottom: 5vh;
-    animation: tipAnimation 10s linear;
+    animation: tipAnimation 5s linear;
     animation-iteration-count: 1;
     visibility: hidden;
-}
-.small .tip {
-    display: none;
+    text-align: right;
 }
 @keyframes tipAnimation {
     0% {opacity: 0; visibility: unset;}
@@ -131,6 +129,10 @@ body {
     30% {opacity: 1;}
     80% {opacity: 1}
     100% {opacity: 0; visibility: hidden;}
+}
+
+.small #tip {
+    display: none !important;
 }
 
 /* #photos small view mode */
@@ -198,7 +200,7 @@ body {
 .big .item-container .description {
     position: sticky;
     top: 1rem;
-    width: max-content;
+    min-width: max-content;
     max-width: 15rem;
 }
 
