@@ -124,6 +124,7 @@ body {
 #tip {
     position: fixed;
     bottom: 5vh;
+    right: 1rem;
     visibility: hidden;
     cursor: default;
 }
