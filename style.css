@@ -122,16 +122,15 @@ body {
 }
 
 #tip {
+    position: fixed;
+    bottom: 5vh;
+    visibility: hidden;
     cursor: default;
 }
 
 #tip:not(.tipAnimationCompleted) {
-    position: fixed;
-    bottom: 5vh;
     animation: tipAnimation 5s linear;
     animation-iteration-count: 1;
-    visibility: hidden;
-    text-align: right;
 }
 @keyframes tipAnimation {
     0% {opacity: 0; visibility: unset;}
