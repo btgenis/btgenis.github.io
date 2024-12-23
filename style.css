@@ -67,7 +67,7 @@ a {
 }
 
 .hero {
-    height: 90vh;
+    height: 90svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +123,7 @@ body {
 
 #tip {
     position: fixed;
-    bottom: 5vh;
+    bottom: 5svh;
     visibility: hidden;
     cursor: default;
 }
@@ -179,7 +179,7 @@ body {
 .big .grid {
     display: flex;
     flex-direction: column;
-    gap: 50vh;
+    gap: 50svh;
 }
 .big .item-container {
     display: flex;
@@ -187,10 +187,10 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.2rem;
-    padding: 5vh 0;
+    padding: 5svh 0;
 }
 .big .item-container .img-wrapper {
-    height: 90vh;
+    height: 90svh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -225,7 +225,7 @@ body {
 }
 @media (orientation: portrait) or (max-width:501px){
     #photos {
-        margin-bottom: 15vh;
+        margin-bottom: 15svh;
     }
     .small .grid {
         gap: 0.9vw;
@@ -235,7 +235,7 @@ body {
         height: calc((99vw - 2rem - 2.7vw) * 1.333 / 4);
     }
     #photos.big {
-        margin-top: 7vh !important;
+        margin-top: 7svh !important;
     }
     .big .item-container {
         flex-direction: column-reverse;
