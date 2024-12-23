@@ -212,6 +212,13 @@ body {
     top: 1rem;
     min-width: max-content;
     max-width: 15rem;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* Media queries */
