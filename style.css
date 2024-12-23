@@ -225,7 +225,7 @@ body {
 }
 @media (orientation: portrait) or (max-width:501px){
     #photos {
-        margin-bottom: 15vh;
+        margin-bottom: 8rem;
     }
     .small .grid {
         gap: 0.9vw;
@@ -235,13 +235,17 @@ body {
         height: calc((99vw - 2rem - 2.7vw) * 1.333 / 4);
     }
     #photos.big {
-        margin-top: 7vh !important;
+        margin-top: 4rem !important;
+    }
+    .big .grid {
+        gap: 25rem;
     }
     .big .item-container {
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: stretch;
         height: auto;
+        padding: 2rem 0;
     }
     .big .item-container .description{
         position: unset;
