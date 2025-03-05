@@ -228,12 +228,12 @@ footer {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 1.2rem;
+    gap: 1rem;
 }
 #portrait-wrapper {
     flex-shrink: 0;
-    height: 9.3rem;
-    width: 4.65rem;
+    height: 8rem;
+    width: 4rem;
     overflow: hidden;
 }
 #portrait {
