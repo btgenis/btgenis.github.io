@@ -221,6 +221,41 @@ body {
     user-select: none;
 }
 
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+#portrait-wrapper {
+    flex-shrink: 0;
+    height: 9.3rem;
+    width: 4.65rem;
+    /* overflow: hidden; */
+}
+#portrait {
+    height: 100%;
+    width: auto;
+    filter: invert(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: .3s all ease-in-out;
+    cursor: zoom-in;
+} #portrait:hover {
+    filter: invert(0);
+    -webkit-transform: scale(5);
+    transform: scale(5);
+    -webkit-transform-origin: 71% 55%;
+    transform-origin: 71% 55%;
+}
+#footer-text {
+    min-width: 3rem;
+}
+
+
 /* Media queries */
 @media only screen and (max-width: 1000px) {
     .small .item-container .img-wrapper{
