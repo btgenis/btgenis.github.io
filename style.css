@@ -244,7 +244,8 @@ footer {
     transform: scale(1);
     transition: .3s all ease-in-out;
     cursor: zoom-in;
-} #portrait:hover {
+}
+#portrait.fullsize {
     filter: invert(0);
     -webkit-transform: scale(5);
     transform: scale(5);

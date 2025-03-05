@@ -76,7 +76,7 @@
     <div class="spacer-3x"></div>
 
     <footer class="medium-width align-center">
-        <div id="portrait-wrapper"><img id="portrait" src="img/IMG_6935.jpeg" width="1100" height="2200" title="B. T. Geniş"></div>
+        <div id="portrait-wrapper"><img id="portrait" src="img/IMG_6935.jpeg" width="1100" height="2200" title="B. T. Geniş" onclick="change(this)"></div>
         <div id="footer-text" class="tiny-width">
             <p>Usage rights of the photos on this website are reserved by the publisher.</p>
             <br>
@@ -91,6 +91,13 @@
     <!-- <a href="/index.html" class="logo noselect"><img src="src/logo.svg" alt="" width="15px"></a> -->
     
     <script src="javascript.js" type="text/javascript"></script>
+
+    <script>
+            // Function for footer image scaling
+            function change(element) {
+                element.classList.toggle("fullsize");
+            }
+    </script>
 
 </body>
 </html>
