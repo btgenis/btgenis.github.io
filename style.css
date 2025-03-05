@@ -234,7 +234,7 @@ footer {
     flex-shrink: 0;
     height: 9.3rem;
     width: 4.65rem;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 #portrait {
     height: 100%;
