@@ -251,6 +251,7 @@ footer {
     transform: scale(5);
     -webkit-transform-origin: 71% 55%;
     transform-origin: 71% 55%;
+    cursor: zoom-out;
 }
 #footer-text {
     min-width: 3rem;
