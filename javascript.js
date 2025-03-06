@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
 
     // check the saved view mode and apply it
-    const savedViewMode = localStorage.getItem('viewMode') || 'big';
+    const savedViewMode = localStorage.getItem('viewMode') || 'small'; // Set default view mode
     setViewMode(savedViewMode);
     images.forEach(image => {
         const rect = image.getBoundingClientRect();
