@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setViewMode(newMode);
         event.target.scrollIntoView({ behavior: 'auto', block: 'center' });
         loadLargeImage(event.target);  // Load large image when toggling
+        tip.classList.add('tipAnimationCompleted');
     }
 
     // Set up Intersection Observer

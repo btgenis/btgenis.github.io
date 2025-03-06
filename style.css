@@ -130,14 +130,16 @@ body {
 }
 
 #tip:not(.tipAnimationCompleted) {
-    animation: tipAnimation 5s linear;
+    animation: tipAnimation 10s linear;
     animation-iteration-count: 1;
 }
 @keyframes tipAnimation {
     0% {opacity: 0; visibility: unset;}
     10% {opacity: 0;}
     30% {opacity: 1;}
-    80% {opacity: 1}
+    50% {opacity: 0.1;}
+    70% {opacity: 1;}
+    80% {opacity: 1;}
     100% {opacity: 0; visibility: hidden;}
 }
 
