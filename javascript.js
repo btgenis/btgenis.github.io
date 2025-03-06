@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const photosDiv = document.getElementById("photos");
     const images = document.querySelectorAll(".grid img");
     const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
+    const logo = document.getElementById("logo");
 
     // check the saved view mode and apply it
     const savedViewMode = localStorage.getItem('viewMode') || 'small'; // Set default view mode
@@ -83,4 +84,14 @@ document.addEventListener("DOMContentLoaded", function() {
         image.addEventListener('click', toggleClassAndScroll);
         observer.observe(image);
     });
+
+    // Function to display the grid view
+    function displayGridView() {
+        photosDiv.classList.remove("small", "big");
+        photosDiv.classList.add("small");
+        localStorage.setItem('viewMode', "small");
+        window.scrollTo({top:0});
+    }
+    // Display the grid when the user clicks on the logo
+    logo.addEventListener("click", displayGridView);
 });
