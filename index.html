@@ -67,7 +67,7 @@
             <div class="item-container"><div class="description">IMG_9998</div><div class="img-wrapper"><img class="lazy-image" loading="lazy" src="img/thumb/IMG_9998.jpeg" data-large="img/IMG_9998.jpeg" width="1650" height="2200"></div></div>
             <div class="item-container"><div class="description">IMG_7304</div><div class="img-wrapper"><img class="lazy-image" loading="lazy" src="img/thumb/IMG_7304.jpeg" data-large="img/IMG_7304.jpeg" width="2200" height="1650"></div></div>
         </div>
-        <div id="tip" class="noselect">click on the images to switch view modes</div>
+        <div id="tip" class="noselect">click on the photos to display in grid</div>
     </div>
 
     <main class="max-width align-center">
@@ -77,7 +77,7 @@
     <div class="spacer-3x"></div>
 
     <footer class="medium-width align-center">
-        <div id="portrait-wrapper"><img id="portrait" src="img/IMG_6935.jpeg" width="1100" height="2200" title="B. T. Geniş" onclick="change(this)"></div>
+        <img id="portrait" class="noselect" src="src/blue.jpeg" width="1100" height="2200" title="B. T. Geniş">
         <div id="footer-text" class="tiny-width">
             <p>Usage rights of the photos on this website are reserved by the publisher.</p>
             <br>
@@ -89,16 +89,8 @@
     </footer>
     <div class="spacer-2x"></div>
 
-    <!-- <a href="/index.html" class="logo noselect"><img src="src/logo.svg" alt="" width="15px"></a> -->
+    <img class="logo noselect" src="src/logo.svg" title="btgenis.com" width="15px" draggable="false">
     
     <script src="javascript.js" type="text/javascript"></script>
-
-    <script>
-            // Function for footer image scaling
-            function change(element) {
-                element.classList.toggle("fullsize");
-            }
-    </script>
-
 </body>
 </html>
