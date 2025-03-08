@@ -238,6 +238,11 @@ footer {
     height: 8rem;
     width: 4rem;
     cursor: default;
+    opacity: 0;
+    transition: .3s opacity ease;
+}
+#portrait.loaded {
+    opacity: 1;
 }
 #footer-text {
     min-width: 3rem;
