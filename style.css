@@ -296,6 +296,12 @@ footer {
 
 /* Smooth Loading Options */
 
+.small .img-wrapper:not(.completed-loading-small) {
+    animation: pulse 2s infinite;
+    background-color: rgb(128, 128, 128);
+    opacity: 0.2;
+}
+
 .small .img-wrapper.completed-loading-small > img:not(.initiated-loading) {
     opacity: 1;
 }
