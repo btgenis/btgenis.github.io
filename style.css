@@ -261,7 +261,7 @@ footer {
 }
 #corner {
     position: absolute;
-    right: 0;
+    right: -3px;
     bottom: 0;
     width: 1.8rem;
     height: .9rem;
