@@ -229,10 +229,6 @@ a {
 
 main {
     text-align: justify;
-    /* border-top: 1px solid rgb(86, 135, 224);
-    border-left: 5px solid rgb(86, 135, 224);
-    padding-top: .7rem;
-    padding-left: .7rem; */
 }
 
 footer {
@@ -265,7 +261,7 @@ footer {
 }
 #corner {
     position: absolute;
-    right: -0.5rem;
+    right: 0;
     bottom: 0;
     width: 1.8rem;
     height: .9rem;
@@ -280,7 +276,6 @@ footer {
     color: var(--globalFadedColor);
     color: rgb(86, 135, 224);
     letter-spacing: .7rem;
-    margin-right: -0.4rem;
 }
 
 
