@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, {
         root: null,
-        rootMargin: "300px",
+        rootMargin: "300px 0px",
         threshold: 0.1
     });
 
