@@ -59,7 +59,7 @@ body {
 
 .spacer-1x {height: 1.5rem;}
 .spacer-2x {height: 3rem;}
-.spacer-3x {height: 5rem;}
+.spacer-3x {height: 4.5rem;}
 
 h1,h2,h3,h4,h5,h6 {all:unset;}
 
@@ -116,7 +116,7 @@ a {
 /* #photos */
 
 #photos {
-    margin: 3rem 0 6.5rem 0;
+    margin: 3rem 0 5rem 0;
 }
 #photos.big {
     margin-top: 0;
@@ -224,19 +224,33 @@ a {
     user-select: none;
 }
 
-/* Footer */
+
+/* Main and Footer */
+
+main {
+    text-align: justify;
+    /* border-top: 1px solid rgb(86, 135, 224);
+    border-left: 5px solid rgb(86, 135, 224);
+    padding-top: .7rem;
+    padding-left: .7rem; */
+}
 
 footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 1rem;
 }
+#portrait-wrapper {
+    max-width: 4rem;
+    position: relative;
+}
 #portrait {
-    flex-shrink: 0;
-    height: 8rem;
-    width: 4rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom right;
     cursor: default;
     opacity: 0;
     transition: .3s opacity ease;
@@ -246,6 +260,27 @@ footer {
 }
 #footer-text {
     min-width: 3rem;
+    position: relative;
+    text-align: justify;
+}
+#corner {
+    position: absolute;
+    right: -0.5rem;
+    bottom: 0;
+    width: 1.8rem;
+    height: .9rem;
+    border-bottom: 1px solid rgb(86, 135, 224);
+    border-right: 5px solid rgb(86, 135, 224);
+}
+#photo-count {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    color: var(--globalFadedColor);
+    color: rgb(86, 135, 224);
+    letter-spacing: .7rem;
+    margin-right: -0.4rem;
 }
 
 
@@ -261,7 +296,7 @@ footer {
 }
 @media (orientation: portrait) or (max-width:501px){
     #photos {
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
     .small .grid {
         gap: 0.9vw;
