@@ -100,6 +100,10 @@ a {
     user-select: none;
 }
 
+.nopointerevents {
+    pointer-events: none;
+}
+
 
 #logo {
     border: none !important;
@@ -230,7 +234,6 @@ a {
 main {
     text-align: justify;
 }
-
 footer {
     display: flex;
     flex-direction: row;
@@ -239,7 +242,7 @@ footer {
     gap: 1rem;
 }
 #portrait-wrapper {
-    max-width: 4rem;
+    max-width: 3.7rem;
     position: relative;
 }
 #portrait {
@@ -261,21 +264,27 @@ footer {
 }
 #corner {
     position: absolute;
-    right: -3px;
-    bottom: 0;
-    width: 1.9rem;
+    right: -.5rem;
+    bottom: -.2rem;
+    width: .9rem;
     height: .9rem;
     border-bottom: 1px solid rgb(86, 135, 224);
     border-right: 5px solid rgb(86, 135, 224);
 }
 #photo-count {
-    display: inline-block;
     position: absolute;
-    right: 0;
-    bottom: 1px;
-    color: var(--globalFadedColor);
+    right: 1px;
+    bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: .7rem;
+    cursor: default;
+}
+#photo-count > span {
     color: rgb(86, 135, 224);
-    letter-spacing: .7rem;
+    background-color: var(--globalBackgroundFade);
+    padding: 0 2px;
 }
 
 
