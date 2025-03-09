@@ -59,7 +59,7 @@ body {
 
 .spacer-1x {height: 1.5rem;}
 .spacer-2x {height: 3rem;}
-.spacer-3x {height: 6.5rem;}
+.spacer-3x {height: 5rem;}
 
 h1,h2,h3,h4,h5,h6 {all:unset;}
 
@@ -116,7 +116,7 @@ a {
 /* #photos */
 
 #photos {
-    margin: 3rem 0 10rem 0;
+    margin: 3rem 0 6.5rem 0;
 }
 #photos.big {
     margin-top: 0;
