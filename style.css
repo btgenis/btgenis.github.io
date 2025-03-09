@@ -28,6 +28,23 @@
     src: url(src/InterVariable.ttf);
 }
 
+/* Page */
+
+body {
+    overflow-x: hidden;
+    padding: 0 1rem 1rem 1rem;
+    font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
+    font-weight: 350;
+    color: var(--globalFontColor);
+    background-color: var(--globalBackgroundColor);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
 /* Elements */
 
 .max-width {max-width: 100rem;}
@@ -95,23 +112,6 @@ a {
     cursor: pointer;
 } #logo:hover {opacity: 1;}
 
-
-/* Page */
-
-body {
-    overflow-x: hidden;
-    padding: 0 1rem 1rem 1rem;
-    font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
-    font-weight: 350;
-    color: var(--globalFontColor);
-    background-color: var(--globalBackgroundColor);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    font-size: .9rem;
-    line-height: 1.2;
-}
 
 /* #photos */
 
