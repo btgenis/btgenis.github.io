@@ -241,16 +241,8 @@ footer {
     align-items: stretch;
     gap: .7rem;
 }
-#navbar {
-    border-top: 5px solid var(--globalFadedColor);
-    border-bottom: 1px solid var(--globalFadedColor);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: .5rem;
-}
 #portrait-wrapper {
-    max-width: 4rem;
+    max-width: 4.5rem;
     position: relative;
 }
 #portrait {
@@ -271,7 +263,7 @@ footer {
     text-align: justify;
 }
 #footer-text p:not(:last-of-type) {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 #corner {
     position: absolute;
