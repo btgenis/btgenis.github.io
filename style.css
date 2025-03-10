@@ -242,7 +242,7 @@ footer {
     gap: .7rem;
 }
 #portrait-wrapper {
-    max-width: 4.5rem;
+    max-width: 3.5rem;
     position: relative;
 }
 #portrait {
@@ -267,30 +267,23 @@ footer {
 }
 #corner {
     position: absolute;
-    right: 0;
+    right: -2px;
     bottom: -2px;
-    width: 3rem;
-    height: 1.1rem;
-    border-bottom: 1px solid var(--globalFadedColor);
-    border-right: 5px solid var(--globalFadedColor);
+    width: 3.1rem;
+    height: 1rem;
+    border-bottom: 1px solid rgb(60, 125, 235);
+    border-right: 5px solid rgb(60, 125, 235);
 }
-#days-count {
+#photo-count {
     position: absolute;
-    right: 9px;
+    right: 8px;
     bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: .7rem;
     cursor: default;
-}
-#photo-count {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 5px solid var(--globalFadedColor);
-    border-bottom: 1px solid var(--globalFadedColor);
-    margin-bottom: .5rem;
+    color: rgb(60, 125, 235);
 }
 
 

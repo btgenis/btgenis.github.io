@@ -78,12 +78,11 @@
     <footer class="medium-width align-center">
         <div id="portrait-wrapper"><img id="portrait" class="noselect" src="src/blue.jpeg" width="1100" height="2200" title="B. T. Geniş" draggable="false" onload="this.classList.add('loaded')"></div>
         <div id="footer-text" class="tiny-width">
-            <div id="photo-count" class="noselect nopointerevents"></div>
             <p>Usage rights of the photos on this website are reserved by the publisher.</p>
             <p>This website is published by B. T. Geniş <a href="mailto:btgenis@proton.me">(btgenis@proton.me)</a></p>
             <p>2024—</p>
             <div id="corner"></div>
-            <div id="days-count" class="noselect nopointerevents"></div>
+            <div id="photo-count" class="noselect nopointerevents"></div>
         </div>
     </footer>
     <div class="spacer-2x"></div>
@@ -96,7 +95,7 @@
         function countPhotos() {
             let parent = document.getElementById("photos");
             let imgCount = parent.getElementsByTagName("img").length;
-            let formattedCount = String(imgCount).padStart(4, '0');
+            let formattedCount = String(imgCount).padStart(3, '0');
             const photoCount = formattedCount;
             const photoCountContainer = document.getElementById("photo-count");
             photoCountContainer.innerHTML = "";
@@ -107,26 +106,6 @@
             }
         }
         countPhotos();
-
-        // Days Count
-        function daysSince(dateString) {
-            const pastDate = new Date(dateString);
-            const currentDate = new Date();
-            const difference = currentDate - pastDate;
-            let days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            return days.toString().padStart(3, '0');
-        }
-        function displayDays() {
-            const days = daysSince("2024-10-20");
-            const container = document.getElementById("days-count");
-            container.innerHTML = "";
-            for (const digit of days) {
-                const span = document.createElement("span");
-                span.textContent = digit;
-                container.appendChild(span);
-            }
-        }
-        displayDays();
     </script>
 </body>
 </html>
