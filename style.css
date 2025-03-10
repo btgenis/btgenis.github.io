@@ -8,7 +8,7 @@
     --globalBackgroundColor: rgb(255, 255, 255);
     --globalBackgroundFade: rgb(230, 230, 230);
     --globalFontColor: rgb(15, 15, 15);
-    --globalFadedColor: rgb(180, 180, 180);
+    --globalFadedColor: rgb(200, 200, 200);
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -76,11 +76,11 @@ img {
 
 a {
     text-decoration: none;
-    border-bottom: .05rem solid;
-    padding-bottom: .1rem;
     color: var(--globalFontColor);
+    transition: .3s ease;
 } a:hover {
     border-bottom: none;
+    opacity: .5;
 }
 
 .hero {
@@ -239,10 +239,18 @@ footer {
     flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;
-    gap: 1rem;
+    gap: .7rem;
+}
+#navbar {
+    border-top: 5px solid var(--globalFadedColor);
+    border-bottom: 1px solid var(--globalFadedColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: .5rem;
 }
 #portrait-wrapper {
-    max-width: 3.7rem;
+    max-width: 4rem;
     position: relative;
 }
 #portrait {
@@ -262,29 +270,35 @@ footer {
     position: relative;
     text-align: justify;
 }
+#footer-text p:not(:last-of-type) {
+    margin-bottom: .5rem;
+}
 #corner {
     position: absolute;
-    right: -.5rem;
-    bottom: -.2rem;
-    width: .9rem;
-    height: .9rem;
-    border-bottom: 1px solid rgb(86, 135, 224);
-    border-right: 5px solid rgb(86, 135, 224);
+    right: 0;
+    bottom: -2px;
+    width: 3rem;
+    height: 1.1rem;
+    border-bottom: 1px solid var(--globalFadedColor);
+    border-right: 5px solid var(--globalFadedColor);
 }
-#photo-count {
+#days-count {
     position: absolute;
-    right: 1px;
-    bottom: 2px;
+    right: 9px;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: .7rem;
     cursor: default;
 }
-#photo-count > span {
-    color: rgb(86, 135, 224);
-    background-color: var(--globalBackgroundFade);
-    padding: 0 2px;
+#photo-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 5px solid var(--globalFadedColor);
+    border-bottom: 1px solid var(--globalFadedColor);
+    margin-bottom: .5rem;
 }
 
 
@@ -299,6 +313,7 @@ footer {
     }
 }
 @media (orientation: portrait) or (max-width:501px){
+    .tiny-width {max-width: 14rem;}
     #photos {
         margin-bottom: 5rem;
     }

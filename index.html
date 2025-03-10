@@ -70,7 +70,8 @@
         </div>
         <div id="tip" class="noselect">CLICK ON THE PHOTOS FOR GRID VIEW</div>
     </div>
-
+    
+    <div id="photo-count" class="noselect nopointerevents"></div>
     <main class="max-width align-center">
         <p>Most of what we see isn't particularly important or interesting—but how we see it? That’s a different story. The way even the most ordinary person experiences the world and chooses to frame it holds something fascinating. Each of these pictures captures a feeling tied to a moment in time, with the framing serving as an attempt to convey the original experience to the viewer. This is an archive of fleeting moments, stitched together in light and memory.</p>
     </main>
@@ -78,13 +79,15 @@
     <footer class="medium-width align-center">
         <div id="portrait-wrapper"><img id="portrait" class="noselect" src="src/blue.jpeg" width="1100" height="2200" title="B. T. Geniş" draggable="false" onload="this.classList.add('loaded')"></div>
         <div id="footer-text" class="tiny-width">
+            <div id="navbar">
+                <a href="https://www.letterboxd.com/btgenis">Letterboxd</a>
+                <a href="https://www.are.na/b-t-genis/channels">Are.na</a>
+            </div>
             <p>Usage rights of the photos on this website are reserved by the publisher.</p>
-            <br>
-            <p>This website is published by B. T. Geniş (<a href="mailto:btgenis@proton.me">btgenis@proton.me</a>)</p>
-            <br>
+            <p>This website is published by B. T. Geniş <a href="mailto:btgenis@proton.me">(btgenis@proton.me)</a></p>
             <p>2024—</p>
             <div id="corner"></div>
-            <div id="photo-count" class="noselect nopointerevents"></div>
+            <div id="days-count" class="noselect nopointerevents"></div>
         </div>
     </footer>
     <div class="spacer-2x"></div>
@@ -97,8 +100,8 @@
         function countPhotos() {
             let parent = document.getElementById("photos");
             let imgCount = parent.getElementsByTagName("img").length;
-            let formattedCount = String(imgCount).padStart(3, '0');
-            const photoCount = "P" + formattedCount;
+            let formattedCount = String(imgCount).padStart(4, '0');
+            const photoCount = formattedCount;
             const photoCountContainer = document.getElementById("photo-count");
             photoCountContainer.innerHTML = "";
             for (const digitOfPhotoCount of photoCount) {
@@ -108,6 +111,26 @@
             }
         }
         countPhotos();
+
+        // Days Count
+        function daysSince(dateString) {
+            const pastDate = new Date(dateString);
+            const currentDate = new Date();
+            const difference = currentDate - pastDate;
+            let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            return days.toString().padStart(3, '0');
+        }
+        function displayDays() {
+            const days = daysSince("2024-10-20");
+            const container = document.getElementById("days-count");
+            container.innerHTML = "";
+            for (const digit of days) {
+                const span = document.createElement("span");
+                span.textContent = digit;
+                container.appendChild(span);
+            }
+        }
+        displayDays();
     </script>
 </body>
 </html>
