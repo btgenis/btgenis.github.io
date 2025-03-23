@@ -29,7 +29,7 @@
 body {
     overflow-x: hidden;
     padding: 0 1rem 1rem 1rem;
-    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
     font-weight: 350;
     color: var(--globalFontColor);
     background-color: var(--globalBackgroundColor);
