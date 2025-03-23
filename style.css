@@ -23,17 +23,13 @@
     font-family: 'Roboto';
     src: url(src/RobotoCondensed-VariableFont_wght.ttf);
 }
-@font-face {
-    font-family: 'Inter';
-    src: url(src/InterVariable.ttf);
-}
 
 /* Page */
 
 body {
     overflow-x: hidden;
     padding: 0 1rem 1rem 1rem;
-    font-family: 'Roboto', 'Inter', 'Arial', 'Sans-Serif';
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 350;
     color: var(--globalFontColor);
     background-color: var(--globalBackgroundColor);
