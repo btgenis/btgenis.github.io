@@ -112,48 +112,6 @@ a {
     cursor: pointer;
 } #logo:hover {opacity: 1;}
 
-#message {
-    position: fixed;
-    inset: 0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 10vw;
-    color: white;
-    background-color: red;
-    animation: messageAnimation 10s linear;
-    animation-iteration-count: 1;
-    visibility: hidden;
-}
-@keyframes messageAnimation {
-    0% {opacity: 0; visibility: unset;}
-    10% {opacity: 0;}
-    20% {opacity: 1;}
-    40% {opacity: 1; color: white; background-color: red;}
-    60% {opacity: 1; color: red; background-color: black;}
-    90% {opacity: 1;}
-    100% {opacity: 0; visibility: hidden; background-color: black; color: red;}
-}
-#message .line {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#message .line:not(.impact) {
-    animation: notImpactAnimation 10s linear;
-    animation-iteration-count: 1;
-}
-@keyframes notImpactAnimation {
-    0% {opacity: 1;}
-    40% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
-
 /* #photos */
 
 #photos {
@@ -368,10 +326,6 @@ footer {
         width: 100%;
         height: auto;
         object-position: bottom left;
-    }
-    #message {
-        justify-content: center;
-        gap: 20vw;
     }
 }
 
