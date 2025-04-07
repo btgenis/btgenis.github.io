@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Light/Dark mode settings */
+:root {
+    --globalBackgroundColor: rgb(255, 255, 255);
+    --globalBackgroundFade: rgb(230, 230, 230);
+    --globalFontColor: rgb(15, 15, 15);
+    --globalFadedColor: rgb(200, 200, 200);
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --globalBackgroundColor: rgb(18, 18, 18);
+        --globalBackgroundFade: rgb(30, 30, 30);
+        --globalFontColor: rgb(235, 235, 235);
+        --globalFadedColor: rgb(60, 60, 60);
+    }
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(src/RobotoCondensed.ttf);
+}
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(src/RobotoCondensed-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: 'RobotoVariable';
+    src: url(src/Roboto-Variable.ttf);
+}
+@font-face {
+    font-family: 'RobotoVariable';
+    src: url(src/Roboto-Italic.ttf);
+    font-style: italic;
+}
+
+body {
+    overflow-x: hidden;
+    padding: 0 1rem 1rem 1rem;
+    font-family: 'RobotoCondensed', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 350;
+    color: var(--globalFontColor);
+    background-color: var(--globalBackgroundColor);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
+/* Elements */
+
+.max-width {max-width: 100rem;}
+.large-width {max-width: 75rem;}
+.medium-width {max-width: 45rem;}
+.small-width {max-width: 30rem;}
+.tiny-width {max-width: 16rem;}
+
+.align-center {margin: 0 auto;}
+.align-left {margin-left: 0;margin-right: auto;}
+.align-right {margin-right: 0;margin-left: auto;}
+
+.spacer-1x {height: 1.5rem;}
+.spacer-2x {height: 3rem;}
+.spacer-3x {height: 4.5rem;}
+
+h1,h2,h3,h4,h5,h6 {all:unset;}
+
+a {
+    text-decoration: none;
+    color: var(--globalFontColor);
+    transition: .3s ease;
+} a:hover {
+    border-bottom: none;
+    opacity: .5;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nopointerevents {
+    pointer-events: none;
+}
+
+
+#logo {
+    border: none !important;
+    display: inline-block;
+    transition: .3s ease-in-out;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1rem;
+    opacity: .2;
+    cursor: pointer;
+} #logo:hover {opacity: 1;}
