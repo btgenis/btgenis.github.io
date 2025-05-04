@@ -189,7 +189,7 @@ footer {
         gap: 0.39vw;
     }
 }
-@media (orientation: portrait) or (max-width:501px){
+@media (orientation: portrait) and (max-width:501px){
     .tiny-width {max-width: 14rem;}
     .small .grid {
         gap: 0.9vw;
