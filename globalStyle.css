@@ -9,6 +9,9 @@
     --globalBackgroundFade: rgb(230, 230, 230);
     --globalFontColor: rgb(15, 15, 15);
     --globalFadedColor: rgb(200, 200, 200);
+    --boxShadowColor: rgba(0,0,0,.1);
+
+    --globalPadding: 1rem;
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -16,6 +19,7 @@
         --globalBackgroundFade: rgb(30, 30, 30);
         --globalFontColor: rgb(235, 235, 235);
         --globalFadedColor: rgb(60, 60, 60);
+        --boxShadowColor: rgba(210, 210, 210, 0.1);
     }
 }
 
@@ -53,6 +57,30 @@ body {
     line-height: 1.2;
 }
 
+.header {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: .6rem;
+    align-items: flex-start;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.header #brand {
+    font-size: 2rem;
+}
+.header #navbar {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
 /* Elements */
 
 .max-width {max-width: 100rem;}
@@ -68,8 +96,6 @@ body {
 .spacer-1x {height: 1.5rem;}
 .spacer-2x {height: 3rem;}
 .spacer-3x {height: 4.5rem;}
-
-h1,h2,h3,h4,h5,h6 {all:unset;}
 
 a {
     text-decoration: none;
@@ -112,3 +138,9 @@ a {
     opacity: .2;
     cursor: pointer;
 } #logo:hover {opacity: 1;}
+
+@media screen and (max-width: 700px) {
+    .header #brand {
+        font-size: 1.5rem;
+    }
+}
