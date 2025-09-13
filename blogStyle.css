@@ -36,7 +36,15 @@
     }
 
 /* Elements */
-img    {display: block;}
+img    {
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 h1     {all: unset; font-size: 1.5em;}
 
 body {
