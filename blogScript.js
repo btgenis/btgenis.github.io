@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const isBig = postsContainer.classList.contains("big");
 
         if (isSmall) {
-            // In "small" view: clicking on a .post switches to "big"
-            const post = event.target.closest(".post");
+            // In "small" view: clicking on a article switches to "big"
+            const post = event.target.closest("article");
             if (!post) return;
 
             postsContainer.classList.remove("small");
             postsContainer.classList.add("big");
 
             // Remove active from all posts
-            document.querySelectorAll(".post.active").forEach(p => p.classList.remove("active"));
+            document.querySelectorAll("article.active").forEach(p => p.classList.remove("active"));
 
             // Add active to the clicked post
             post.classList.add("active");
@@ -30,21 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
             postsContainer.classList.add("small");
 
             // Remove all active classes in small mode
-            document.querySelectorAll(".post.active").forEach(p => p.classList.remove("active"));
+            document.querySelectorAll("article.active").forEach(p => p.classList.remove("active"));
 
-            const post = closeButton.closest(".post");
+            const post = closeButton.closest("article");
             if (post) {
                 post.scrollIntoView({ block: "start" });
             }
         }
         else {
-            // If no class yet, default to "big" when clicking a .post
-            const post = event.target.closest(".post");
+            // If no class yet, default to "big" when clicking a article
+            const post = event.target.closest("article");
             if (post) {
                 postsContainer.classList.add("big");
 
                 // Remove active from all posts
-                document.querySelectorAll(".post.active").forEach(p => p.classList.remove("active"));
+                document.querySelectorAll("article.active").forEach(p => p.classList.remove("active"));
 
                 // Add active to clicked
                 post.classList.add("active");
