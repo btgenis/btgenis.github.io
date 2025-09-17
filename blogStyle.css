@@ -111,7 +111,7 @@ body {
 }
 /* Add border to posts with featured text */
 .small .box {
-    border: 2px solid var(--globalBackgroundColor);
+    border: 2px solid var(--globalBackgroundColor); /* This keeps posts without visible borders in line with other posts */
     transition: opacity .3s ease-in-out;
     transition: border-color .3s ease-in-out;
     font-size: var(--fontSize);
