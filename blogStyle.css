@@ -1,7 +1,8 @@
 /* Root styles */
 :root {
-    --max-content-width: calc(100vw - 3rem);
-    --fontSize: 1rem;
+    --max-content-width: calc(100vw - 2.5rem);
+    --fontSizeSmall: 1rem;
+    --fontSizeBig: 1rem
 
     --postBoxWidthB: calc(((var(--max-content-width) - 3rem ) / 6) - 12px);
     --postBoxHeight: calc(((var(--max-content-width) - 3rem ) / 6) - 12px);
@@ -20,7 +21,7 @@
     }
     @media screen and (max-width: 1000px) {
         :root {
-            --fontSize: .9rem;
+            --fontSizeSmall: .9rem;
 
             --postBoxWidth: calc(((var(--max-content-width) - 2rem ) / 3) - 5px);
             --postBoxHeight: calc(((var(--max-content-width) - 2rem ) / 3) - 5px);
@@ -28,7 +29,8 @@
     }
     @media screen and (max-width: 700px) {
         :root {
-            --fontSize: .7rem;
+            --fontSizeSmall: .7rem;
+            --fontSizeBig: .85rem;
 
             --postBoxWidth: calc(((var(--max-content-width) - 1rem ) / 2) - 5px);
             --postBoxHeight: calc(((var(--max-content-width) - 1rem ) / 2) - 5px);
@@ -51,7 +53,7 @@ h1, :is(h1, h2, h3, h4, h5, h6) {
 }
 
 body {
-    font-size: 1rem;
+    font-size: var(--fontSizeBig);
     overflow-x: hidden;
 }
 
@@ -114,7 +116,7 @@ body {
     border: 2px solid var(--globalBackgroundColor); /* This keeps posts without visible borders in line with other posts */
     transition: opacity .3s ease-in-out;
     transition: border-color .3s ease-in-out;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeSmall);
 }
 .small .box:not(:has(img.featured)) {
     border: 2px solid var(--globalBackgroundFade);
@@ -145,7 +147,7 @@ body {
 
 .small .info {
     text-align: center;
-    font-size: var(--fontSize);
+    font-size: var(--fontSizeSmall);
     padding: 5px 0;
 }
 .small .info .close-button {
@@ -171,7 +173,7 @@ body {
 .big .info {
     position: sticky;
     top: 0;
-    padding: 2rem 1rem 1rem 0;
+    padding: 2.15rem 1rem 1rem 0;
 }
 .big .info .close-button {
     cursor: pointer;
@@ -193,7 +195,7 @@ body {
 .big .box {
     width: 700px;
     max-width: 100%;
-    padding: 2rem 1rem 2rem 0;
+    padding: 2rem 0;
     height: auto;
     display: flex;
     flex-direction: column;
