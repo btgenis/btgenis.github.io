@@ -195,7 +195,7 @@ body {
 .big .box {
     width: 700px;
     max-width: 100%;
-    padding: 2rem 0;
+    padding: 2rem .5rem 2rem 0;
     height: auto;
     display: flex;
     flex-direction: column;
