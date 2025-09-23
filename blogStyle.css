@@ -47,8 +47,13 @@ img {
     -ms-user-select: none;
     user-select: none;
 }
+.caption {
+    color: gray;
+    font-style: italic;
+    text-align: center;
+}
 h1, :is(h1, h2, h3, h4, h5, h6) {
-    all: unset;
+    font-weight: normal;
     font-size: 1.5em;
 }
 
@@ -104,8 +109,16 @@ body {
     height: var(--postBoxHeight);
 }
 /* Hide everything but the featured element inside the box */
-.small .box > :not(.featured) {
+/* IF the box doesn't have a featured element don't hide paragraphs */
+/* IF the box has a featured image, hide everything but the image */
+.small .box:has(.featured) > :not(.featured),
+.small .box:not(:has(.featured)) > :not(p),
+.small .box:has(img.featured) > :not(img.featured) {
     display: none;
+}
+/* If the box doesn't containt a featured element, only display paragraphs */
+.box:not(:has(.featured)) > p {
+  display: block;
 }
 /* Add padding and border to certain elements inside the box */
 .small .box > :not(img.featured) {
@@ -132,10 +145,10 @@ body {
     text-align: center;
 }
 /* Add fading effect when displaying a featrued paragraph */
-.small .box p.featured::after, .small .box h1.featured::after {
+.small .box:not(:has(.featured)) > p::after {
     content: "";
     position: absolute;
-    inset: 70% 0 0 0;
+    inset: 80% 0 0 0;
     background: linear-gradient(to top, var(--globalBackgroundColor), transparent);
 }
 /* Displaying featured images */
@@ -197,18 +210,18 @@ body {
     max-width: 100%;
     padding: 2rem .5rem 2rem 0;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 1rem;
+    display: block;
+}
+.big .box > * {
+    margin-bottom: 1.5rem;
 }
 
 .big .box img {
     width: 500px;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 .big .box img.tiny {
     width: 200px;
