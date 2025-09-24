@@ -2,29 +2,25 @@
 :root {
     --max-content-width: calc(100vw - 2.5rem);
     --fontSizeSmall: 1rem;
-    --fontSizeBig: 1rem
+    --fontSizeBig: 1rem;
 
-    --postBoxWidthB: calc(((var(--max-content-width) - 3rem ) / 6) - 12px);
-    --postBoxHeight: calc(((var(--max-content-width) - 3rem ) / 6) - 12px);
+    --postBoxSize: calc(((var(--max-content-width) - 3rem ) / 6) - 12px);
 }
     @media screen and (max-width: 1800px) {
         :root {
-            --postBoxWidthB: calc(((var(--max-content-width) - 3rem ) / 5) - 10px);
-            --postBoxHeight: calc(((var(--max-content-width) - 3rem ) / 5) - 10px);
+            --postBoxSize: calc(((var(--max-content-width) - 3rem ) / 5) - 10px);
         }
     }
     @media screen and (max-width: 1500px) {
         :root {
-            --postBoxWidthB: calc(((var(--max-content-width) - 3rem ) / 4) - 7px);
-            --postBoxHeight: calc(((var(--max-content-width) - 3rem ) / 4) - 7px);
+            --postBoxSize: calc(((var(--max-content-width) - 3rem ) / 4) - 7px);
         }
     }
     @media screen and (max-width: 1000px) {
         :root {
             --fontSizeSmall: .9rem;
 
-            --postBoxWidth: calc(((var(--max-content-width) - 2rem ) / 3) - 5px);
-            --postBoxHeight: calc(((var(--max-content-width) - 2rem ) / 3) - 5px);
+            --postBoxSize: calc(((var(--max-content-width) - 2rem ) / 3) - 5px);
         }
     }
     @media screen and (max-width: 700px) {
@@ -32,8 +28,7 @@
             --fontSizeSmall: .7rem;
             --fontSizeBig: .85rem;
 
-            --postBoxWidth: calc(((var(--max-content-width) - 1rem ) / 2) - 5px);
-            --postBoxHeight: calc(((var(--max-content-width) - 1rem ) / 2) - 5px);
+            --postBoxSize: calc(((var(--max-content-width) - 1rem ) / 2) - 5px);
         }
     }
 
@@ -53,7 +48,7 @@ img {
     text-align: center;
 }
 h1, :is(h1, h2, h3, h4, h5, h6) {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 1.5em;
 }
 
@@ -91,7 +86,6 @@ body {
     user-select: none;
     transition: opacity .3s ease-in-out;
 }
-
 .small article:hover {
     cursor: pointer;
     opacity: 0.7;
@@ -100,13 +94,19 @@ body {
     border-color: var(--globalFadedColor);
 }
 
+.small article .box-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
 .box {
     overflow: hidden;
     position: relative;
 }
 .small .box {
-    width: var(--postBoxHeight);
-    height: var(--postBoxHeight);
+    width: var(--postBoxSize);
+    height: var(--postBoxSize);
 }
 /* Hide everything but the featured element inside the box */
 /* IF the box doesn't have a featured element don't hide paragraphs */
@@ -158,12 +158,14 @@ body {
     object-fit: contain;
 }
 
-.small .info {
+.small .box-container time {
+    display: block;
+    color: gray;
     text-align: center;
     font-size: var(--fontSizeSmall);
-    padding: 5px 0;
+    padding: .5rem 0;
 }
-.small .info .close-button {
+.small .close-button {
     display: none;
 }
 
@@ -175,7 +177,7 @@ body {
 
 .big article {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2rem;
@@ -183,12 +185,12 @@ body {
 .big article:not(.active) {
     display: none;
 }
-.big .info {
+.big .close-button-container {
     position: sticky;
     top: 0;
     padding: 2.2rem 1rem 1rem 0;
 }
-.big .info .close-button {
+.big .close-button {
     cursor: pointer;
     background-color: var(--globalBackgroundFade);
     transition: background-color .3s ease-in-out;
@@ -199,18 +201,28 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
-.big .info .close-button:hover {
+.big .close-button:hover {
     background-color: var(--globalFadedColor);
 }
-.big .info time {
-    display: none;
-}
-.big .box {
-    width: 700px;
-    max-width: 100%;
-    padding: 2rem .5rem 2rem 0;
-    height: auto;
+.big .box-container {
     display: block;
+    width: 700px;
+    height: auto;
+    margin-top: 2.1rem;
+    padding: 0 .5rem 2rem 0;
+    max-width: 100%;
+}
+.big .box-container time {
+    color: gray;
+    display: block;
+    text-align: right;
+    margin-bottom: .5rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .big .box > * {
     margin-bottom: 1.5rem;
@@ -227,15 +239,8 @@ body {
     width: 200px;
 }
 
-.big .box p {
-    width: 100%;
-}
-
 @media screen and (max-width: 700px) {
     .small .box h1.featured {
         font-size: 1rem;
-    }
-    .small .info {
-        opacity: 1;
     }
 }
