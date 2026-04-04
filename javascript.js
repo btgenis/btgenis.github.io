@@ -1,28 +1,67 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+
+    // --- Element references with null guards ---
     const photosDiv = document.getElementById("photos");
-    const images = document.querySelectorAll(".grid img");
-    const imagesSmallDiv = document.querySelectorAll(".small .img-wrapper");
     const logo = document.getElementById("logo");
+    const tip = document.getElementById("tip");
 
-    // check the saved view mode and apply it
-    const savedViewMode = localStorage.getItem('viewMode') || 'small'; // Set default view mode
-    setViewMode(savedViewMode);
-    images.forEach(image => {
-        const rect = image.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0 && photosDiv.classList.contains("big")) {
-            loadLargeImage(image);
+    if (!photosDiv) {
+        console.warn("javascript.js: #photos element not found. Aborting.");
+        return;
+    }
+
+    const images = document.querySelectorAll(".grid img");
+    const imagesSmallDiv = document.querySelectorAll(".img-wrapper");
+
+    // --- Safe localStorage helpers ---
+    function storageGet(key, fallback) {
+        try {
+            const val = localStorage.getItem(key);
+            return val !== null ? val : fallback;
+        } catch (e) {
+            return fallback;
         }
-    });
+    }
 
-    // Displaying the tip
-    const tip = document.getElementById('tip');
-    tip.addEventListener('animationend', () => {
-        tip.classList.add('tipAnimationCompleted');
-    });
+    function storageSet(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            // Silently fail (e.g. private browsing, storage full)
+        }
+    }
 
-    // Smooth loading small images
+    // --- View mode ---
+    function setViewMode(mode) {
+        photosDiv.classList.remove("small", "big");
+        photosDiv.classList.add(mode);
+        storageSet("viewMode", mode);
+    }
+
+    const savedViewMode = storageGet("viewMode", "small");
+    setViewMode(savedViewMode);
+
+    // Load large images that are already visible on initial "big" load
+    if (photosDiv.classList.contains("big")) {
+        images.forEach(image => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                loadLargeImage(image);
+            }
+        });
+    }
+
+    // --- Tip animation ---
+    if (tip) {
+        tip.addEventListener("animationend", () => {
+            tip.classList.add("tipAnimationCompleted");
+        });
+    }
+
+    // --- Smooth loading for small images ---
     imagesSmallDiv.forEach(div => {
         const img = div.querySelector("img");
+        if (!img) return;
 
         function showLoadedImage() {
             div.classList.add("completed-loading-small");
@@ -35,39 +74,42 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Function to load large image
+    // --- Load large image ---
     function loadLargeImage(image) {
         const largeImageSrc = image.getAttribute("data-large");
-        if (largeImageSrc && !image.classList.contains("loaded")) {
+        if (largeImageSrc && !image.classList.contains("loaded") && !image.classList.contains("initiated-loading")) {
             image.src = largeImageSrc;
             image.classList.add("initiated-loading");
 
-            // Add the class "loaded" only after it finishes loading
-            image.onload = function() {
+            image.onload = function () {
                 image.classList.remove("initiated-loading");
                 image.classList.add("loaded");
+            };
+
+            image.onerror = function () {
+                image.classList.remove("initiated-loading");
+                console.warn("Failed to load large image:", largeImageSrc);
             };
         }
     }
 
-    // Function to set the view mode and save to localStorage
-    function setViewMode(mode) {
-        photosDiv.classList.remove('small', 'big');
-        photosDiv.classList.add(mode);
-        localStorage.setItem('viewMode', mode);
-    }
-
-    // Function to toggle between small and big classes
+    // --- Toggle view on click ---
     function toggleClassAndScroll(event) {
-        const newMode = photosDiv.classList.contains('small') ? 'big' : 'small';
+        // Walk up to the actual <img> in case of any future child elements
+        const image = event.currentTarget;
+        const newMode = photosDiv.classList.contains("small") ? "big" : "small";
         setViewMode(newMode);
-        event.target.scrollIntoView({ behavior: 'auto', block: 'center' });
-        loadLargeImage(event.target);  // Load large image when toggling
-        tip.classList.add('tipAnimationCompleted');
+        image.scrollIntoView({ behavior: "auto", block: "center" });
+        if (newMode === "big") {
+            loadLargeImage(image);
+        }
+        if (tip) {
+            tip.classList.add("tipAnimationCompleted");
+        }
     }
 
-    // Set up Intersection Observer
-    const observer = new IntersectionObserver((entries, observer) => {
+    // --- Intersection Observer for lazy-loading in big mode ---
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && photosDiv.classList.contains("big")) {
                 loadLargeImage(entry.target);
@@ -80,19 +122,32 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.1
     });
 
-    // Start observing each image
+    // --- Keyboard accessibility ---
     images.forEach(image => {
-        image.addEventListener('click', toggleClassAndScroll);
+        // Make images focusable
+        if (!image.hasAttribute("tabindex")) {
+            image.setAttribute("tabindex", "0");
+        }
+        image.setAttribute("role", "button");
+
+        image.addEventListener("click", toggleClassAndScroll);
+
+        image.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggleClassAndScroll(event);
+            }
+        });
+
         observer.observe(image);
     });
 
-    // Function to display the grid view
-    function displayGridView() {
-        photosDiv.classList.remove("small", "big");
-        photosDiv.classList.add("small");
-        localStorage.setItem('viewMode', "small");
-        window.scrollTo({top:0});
+    // --- Logo resets to grid view ---
+    if (logo) {
+        logo.addEventListener("click", function () {
+            setViewMode("small");
+            window.scrollTo({ top: 0 });
+        });
     }
-    // Display the grid when the user clicks on the logo
-    logo.addEventListener("click", displayGridView);
+
 });
